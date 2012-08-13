@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Compilando Ideas</title>
+
+		<%= stylesheet_link_tag "application" %>
+
+		<%= javascript_include_tag "application" %>
+
+		<%= csrf_meta_tag %>
+
+		<link rel="icon" href="/favicon.ico" type="image/ico" />
+		<link rel="shortcut icon" href="/favicon.ico" type="image/ico" />
+
+	</head>
+<% content_for :header do %>
+          <div id="tittle">
+            <h1 id="maintitle"><%=  "Compilando..." %></h1>
+          </div>
+<% end %>
+        
+<% content_for :footer do %>
+
+        <div>	<%=  "CompilandoIdeas.es " %><%= "designed by Afmaga @ 2012" %><%="- All Rights Reserved" %></div>
+<% end %>
+
+<% content_for :sidebar_left  do %>
+   
+    <% if session && session[:role] == "admin" %>
+      <div id="menu-big">
+         <ul>
+       <li id="users">
+          <a href="/users">Usuarios</a>
+       </li>
+       <li id="categories">
+          <a href="/users">Categorias</a>
+       </li>
+    <% else %>
+      <div id="menu">
+         <ul>
+    <% end %>
+     <li id="users">
+      <a href="/home">Indice</a>
+    </li>
+     <li id="users">
+      <a href="/users/<%=session[:user_id]%>">Perfil</a>
+    </li>
+    <li id="users">
+      <a href="/users/<%=session[:user_id]%>">Perfil</a>
+    </li>
+
+    </ul>
+    </div>
+<%end%>
+
+<% content_for :sidebar_right  do %>
+
+      <% if session && session[:role] == "admin" %>
+        <div id="menu-big">
+      <% else %>
+        <div id="menu">
+      <%end%>
+        <ul> 
+          <li id="users">
+            <a href="/users/<%=session[:user_id]%>">Perfil</a>
+          </li>
+        </ul>
+      </div>
+<%end%>
+
+
+<% #END OF YIELD DEFINITION %>
+<body>
+	<div id="out-contain">
+		<div id="contain">
+			<div id="header">
+				<%= yield :header %>
+			</div>
+                  <div style="margin-top:15px;clear:both;"><hr/></div>
+			<div id="main">
+                                <div id="sidebar">
+					<%= yield :sidebar_left %>
+				</div>
+				<div id="content">
+					<%= yield %>
+				</div>
+                                <div id="sidebar">
+					<%= yield :sidebar_right %>
+				</div>
+			</div>
+
+		</div>
+		<div id="footer">
+			<%= yield :footer %>
+		</div>
+		</div>
+
+
+</body>
+</html>

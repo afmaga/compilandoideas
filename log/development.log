@@ -1,0 +1,3556 @@
+  [1m[36m (0.3ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+  [1m[36m (0.3ms)[0m  [1mSELECT version FROM `schema_migrations`[0m
+  [1m[36m (38.2ms)[0m  [1mDROP TABLE `users`[0m
+  [1m[35m (89.3ms)[0m  CREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `email` varchar(255), `hashed_password` varchar(255), `salt` varchar(255), `name` varchar(255), `f_name` varchar(255), `l_name` varchar(255), `active` tinyint(1), `created_at` datetime, `updated_at` datetime, `rol` varchar(255)) ENGINE=InnoDB
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM `schema_migrations`[0m
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2012-08-10 12:41:53 +0200
+Served asset /rails.png - 200 OK (5ms)
+
+
+Started GET "/rails/info/properties" for 127.0.0.1 at 2012-08-10 12:41:56 +0200
+  [1m[36m (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Processing by Rails::InfoController#properties as HTML
+  Rendered inline template (10.8ms)
+Completed 200 OK in 42ms (Views: 41.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2012-08-10 12:42:04 +0200
+
+ActionController::RoutingError (No route matches [GET] "/users"):
+  actionpack (3.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.2) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.2) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.2) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/static.rb:61:in `call'
+  railties (3.2.2) lib/rails/engine.rb:479:in `call'
+  railties (3.2.2) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.2) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /home/alex/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/alex/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/alex/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/layout/application" for 127.0.0.1 at 2012-08-10 12:42:16 +0200
+
+ActionController::RoutingError (No route matches [GET] "/layout/application"):
+  actionpack (3.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.2) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.2) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.2) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/static.rb:61:in `call'
+  railties (3.2.2) lib/rails/engine.rb:479:in `call'
+  railties (3.2.2) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.2) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /home/alex/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/alex/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/alex/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+  [1m[36m (0.3ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateUsers (20120811092726)
+  [1m[35m (194.5ms)[0m  CREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `email` varchar(255), `hashed_password` varchar(255), `salt` varchar(255), `name` varchar(255), `f_name` varchar(255), `l_name` varchar(255), `active` tinyint(1), `role` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (55.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20120811092726')[0m
+Migrating to CreatePosts (20120811093242)
+  [1m[35m (109.0ms)[0m  CREATE TABLE `posts` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255), `content` text, `status` varchar(255), `author_id` int(11), `category_id` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (55.2ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20120811093242')[0m
+Migrating to CreateComments (20120811093833)
+  [1m[35m (87.1ms)[0m  CREATE TABLE `comments` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `author_id` int(11), `status` varchar(255), `content` text, `post_id` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (55.1ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20120811093833')[0m
+Migrating to CreateCategories (20120811094139)
+  [1m[35m (98.8ms)[0m  CREATE TABLE `categories` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255), `description` varchar(255), `category_id` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (55.2ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20120811094139')[0m
+Migrating to AddStatusToUser (20120811094351)
+  [1m[35m (267.1ms)[0m  ALTER TABLE `users` ADD `status` varchar(255)
+  [1m[36m (44.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20120811094351')[0m
+Migrating to AddWebToUser (20120811094636)
+  [1m[35m (189.2ms)[0m  ALTER TABLE `users` ADD `web` varchar(255)
+  [1m[36m (55.4ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20120811094636')[0m
+  [1m[35m (0.2ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2012-08-11 11:50:30 +0200
+Served asset /rails.png - 304 Not Modified (31ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2012-08-11 11:50:46 +0200
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` [0m
+  Rendered users/index.html.erb within layouts/application (11.9ms)
+Compiled categories.css  (51ms)  (pid 7590)
+Compiled comments.css  (1ms)  (pid 7590)
+Compiled posts.css  (1ms)  (pid 7590)
+Compiled scaffolds.css  (13ms)  (pid 7590)
+Compiled users.css  (1ms)  (pid 7590)
+Compiled application.css  (94ms)  (pid 7590)
+Compiled jquery.js  (2ms)  (pid 7590)
+Compiled jquery_ujs.js  (0ms)  (pid 7590)
+Compiled categories.js  (127ms)  (pid 7590)
+Compiled comments.js  (1ms)  (pid 7590)
+Compiled posts.js  (0ms)  (pid 7590)
+Compiled users.js  (0ms)  (pid 7590)
+Compiled application.js  (223ms)  (pid 7590)
+Completed 200 OK in 447ms (Views: 438.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-08-11 11:50:47 +0200
+Served asset /application.css - 200 OK (41ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2012-08-11 11:50:47 +0200
+Served asset /categories.css - 200 OK (2ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2012-08-11 11:50:47 +0200
+Served asset /comments.css - 200 OK (4ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-08-11 11:50:47 +0200
+Served asset /scaffolds.css - 200 OK (2ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-08-11 11:50:47 +0200
+Served asset /posts.css - 200 OK (1ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-08-11 11:50:47 +0200
+Served asset /users.css - 200 OK (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-08-11 11:50:47 +0200
+Served asset /jquery.js - 200 OK (6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-08-11 11:50:47 +0200
+Served asset /jquery_ujs.js - 200 OK (5ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2012-08-11 11:50:47 +0200
+Served asset /categories.js - 200 OK (1ms)
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2012-08-11 11:50:47 +0200
+Served asset /comments.js - 200 OK (1ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-08-11 11:50:47 +0200
+Served asset /posts.js - 200 OK (2ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-08-11 11:50:47 +0200
+Served asset /users.js - 200 OK (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-08-11 11:50:47 +0200
+Served asset /application.js - 200 OK (34ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateUsers (20120811092726)
+Migrating to CreatePosts (20120811093242)
+Migrating to CreateComments (20120811093833)
+Migrating to CreateCategories (20120811094139)
+Migrating to AddStatusToUser (20120811094351)
+Migrating to AddWebToUser (20120811094636)
+  [1m[35m (0.2ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2012-08-11 12:05:17 +0200
+Served asset /rails.png - 304 Not Modified (3ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2012-08-11 12:05:21 +0200
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` [0m
+  Rendered users/index.html.erb within layouts/application (11.2ms)
+Completed 500 Internal Server Error in 372ms
+
+ActionView::Template::Error (undefined method `_' for #<#<Class:0x00000003c55e10>:0x00000003c4e6b0>):
+    1: <!DOCTYPE html>
+    2: <html>
+    3: 	<head>
+    4: 		<title><%=_("Graphical Interface For Rails Generation")%></title>
+    5: 
+    6: 		<%= stylesheet_link_tag "application" %>
+    7: 
+  app/views/layouts/application.html.erb:4:in `_app_views_layouts_application_html_erb__2119517421802375635_33145320'
+  app/controllers/users_controller.rb:7:in `index'
+
+
+  Rendered /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.8ms)
+  Rendered /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (13.0ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateUsers (20120811092726)
+Migrating to CreatePosts (20120811093242)
+Migrating to CreateComments (20120811093833)
+Migrating to CreateCategories (20120811094139)
+Migrating to AddStatusToUser (20120811094351)
+Migrating to AddWebToUser (20120811094636)
+Migrating to AddLanguageToUser (20120811102533)
+  [1m[35m (209.2ms)[0m  ALTER TABLE `users` ADD `language` varchar(255)
+  [1m[36m (43.6ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20120811102533')[0m
+  [1m[35m (0.2ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+
+
+Started GET "/users" for 127.0.0.1 at 2012-08-11 12:30:47 +0200
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` [0m
+  Rendered users/index.html.erb within layouts/application (14.7ms)
+Completed 500 Internal Server Error in 138ms
+
+ActionView::Template::Error (Current textdomain (nil) was not added, use FastGettext.add_text_domain !):
+    1: <!DOCTYPE html>
+    2: <html>
+    3: 	<head>
+    4: 		<title><%=_("Graphical Interface For Rails Generation")%></title>
+    5: 
+    6: 		<%= stylesheet_link_tag "application" %>
+    7: 
+  app/views/layouts/application.html.erb:4:in `_app_views_layouts_application_html_erb___2371904744671893162_36957060'
+  app/controllers/users_controller.rb:7:in `index'
+
+
+  Rendered /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.4ms)
+  Rendered /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2012-08-11 12:38:13 +0200
+
+ActionController::RoutingError (undefined method `init_gettext' for ApplicationController:Class):
+  app/controllers/application_controller.rb:3:in `<class:ApplicationController>'
+  app/controllers/application_controller.rb:1:in `<top (required)>'
+  app/controllers/users_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (45.9ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2012-08-11 12:43:23 +0200
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` [0m
+  Rendered users/index.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 43ms
+
+ActionView::Template::Error (Current textdomain (nil) was not added, use FastGettext.add_text_domain !):
+    1: <!DOCTYPE html>
+    2: <html>
+    3: 	<head>
+    4: 		<title><%=_("Graphical Interface For Rails Generation")%></title>
+    5: 
+    6: 		<%= stylesheet_link_tag "application" %>
+    7: 
+  app/views/layouts/application.html.erb:4:in `_app_views_layouts_application_html_erb__4595081995919909809_31725380'
+  app/controllers/users_controller.rb:7:in `index'
+
+
+  Rendered /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.9ms)
+  Rendered /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (13.1ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2012-08-11 12:45:43 +0200
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` 
+  Rendered users/index.html.erb within layouts/application (0.3ms)
+Completed 500 Internal Server Error in 3ms
+
+ActionView::Template::Error (Current textdomain (nil) was not added, use FastGettext.add_text_domain !):
+    1: <!DOCTYPE html>
+    2: <html>
+    3: 	<head>
+    4: 		<title><%=_("Graphical Interface For Rails Generation")%></title>
+    5: 
+    6: 		<%= stylesheet_link_tag "application" %>
+    7: 
+  app/views/layouts/application.html.erb:4:in `_app_views_layouts_application_html_erb__4595081995919909809_31725380'
+  app/controllers/users_controller.rb:7:in `index'
+
+
+  Rendered /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (29.5ms)
+  Rendered /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (36.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2012-08-11 12:45:44 +0200
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` [0m
+  Rendered users/index.html.erb within layouts/application (0.4ms)
+Completed 500 Internal Server Error in 3ms
+
+ActionView::Template::Error (Current textdomain (nil) was not added, use FastGettext.add_text_domain !):
+    1: <!DOCTYPE html>
+    2: <html>
+    3: 	<head>
+    4: 		<title><%=_("Graphical Interface For Rails Generation")%></title>
+    5: 
+    6: 		<%= stylesheet_link_tag "application" %>
+    7: 
+  app/views/layouts/application.html.erb:4:in `_app_views_layouts_application_html_erb__4595081995919909809_31725380'
+  app/controllers/users_controller.rb:7:in `index'
+
+
+  Rendered /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.5ms)
+  Rendered /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2012-08-11 12:49:32 +0200
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` 
+  Rendered users/index.html.erb within layouts/application (0.4ms)
+Completed 500 Internal Server Error in 4ms
+
+ActionView::Template::Error (Current textdomain (nil) was not added, use FastGettext.add_text_domain !):
+    1: <!DOCTYPE html>
+    2: <html>
+    3: 	<head>
+    4: 		<title><%=_("Graphical Interface For Rails Generation")%></title>
+    5: 
+    6: 		<%= stylesheet_link_tag "application" %>
+    7: 
+  app/views/layouts/application.html.erb:4:in `_app_views_layouts_application_html_erb__4595081995919909809_31725380'
+  app/controllers/users_controller.rb:7:in `index'
+
+
+  Rendered /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.3ms)
+  Rendered /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2012-08-11 12:49:33 +0200
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` [0m
+  Rendered users/index.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 5ms
+
+ActionView::Template::Error (Current textdomain (nil) was not added, use FastGettext.add_text_domain !):
+    1: <!DOCTYPE html>
+    2: <html>
+    3: 	<head>
+    4: 		<title><%=_("Graphical Interface For Rails Generation")%></title>
+    5: 
+    6: 		<%= stylesheet_link_tag "application" %>
+    7: 
+  app/views/layouts/application.html.erb:4:in `_app_views_layouts_application_html_erb__4595081995919909809_31725380'
+  app/controllers/users_controller.rb:7:in `index'
+
+
+  Rendered /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.4ms)
+  Rendered /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2012-08-11 12:49:33 +0200
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` 
+  Rendered users/index.html.erb within layouts/application (0.4ms)
+Completed 500 Internal Server Error in 4ms
+
+ActionView::Template::Error (Current textdomain (nil) was not added, use FastGettext.add_text_domain !):
+    1: <!DOCTYPE html>
+    2: <html>
+    3: 	<head>
+    4: 		<title><%=_("Graphical Interface For Rails Generation")%></title>
+    5: 
+    6: 		<%= stylesheet_link_tag "application" %>
+    7: 
+  app/views/layouts/application.html.erb:4:in `_app_views_layouts_application_html_erb__4595081995919909809_31725380'
+  app/controllers/users_controller.rb:7:in `index'
+
+
+  Rendered /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.4ms)
+  Rendered /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2012-08-11 12:51:10 +0200
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` [0m
+  Rendered users/index.html.erb within layouts/application (0.5ms)
+Compiled jquery.fancybox-1.3.4.css  (6ms)  (pid 7954)
+Compiled jquery.ui.css  (14ms)  (pid 7954)
+Compiled application.css  (33ms)  (pid 7954)
+Compiled jquery.fancybox-1.3.4.js  (0ms)  (pid 7954)
+Compiled jquery.form.js  (0ms)  (pid 7954)
+Compiled jquery.qtip.js  (0ms)  (pid 7954)
+Compiled jquery.snippet.min.js  (0ms)  (pid 7954)
+Compiled application.js  (55ms)  (pid 7954)
+Completed 500 Internal Server Error in 194ms
+
+ActionView::Template::Error (Current textdomain (nil) was not added, use FastGettext.add_text_domain !):
+    15: 	</head>
+    16: <% content_for :header do %>
+    17:           <div id="tittle">
+    18:             <h1 id="maintitle"><%=  _("InnovaXP MetaRails Generator") %></h1>
+    19:           </div>
+    20:           <% if session && session[:role] == "admin" %>
+    21:             <div id="menu-big">
+  app/views/layouts/application.html.erb:18:in `block in _app_views_layouts_application_html_erb__4595081995919909809_39295100'
+  app/views/layouts/application.html.erb:16:in `_app_views_layouts_application_html_erb__4595081995919909809_39295100'
+  app/controllers/users_controller.rb:7:in `index'
+
+
+  Rendered /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.7ms)
+  Rendered /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2012-08-11 12:51:58 +0200
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` 
+  Rendered users/index.html.erb within layouts/application (0.4ms)
+Completed 500 Internal Server Error in 14ms
+
+ActionView::Template::Error (Current textdomain (nil) was not added, use FastGettext.add_text_domain !):
+    34: 
+    35: <% content_for :footer do %>
+    36: 
+    37: 				<%=  _("MetaRails Generator Powered by ")%><%= link_to"Innova Experience @ 2011","http://www.innovaxp.com/es/" %><%=_("- All Rights Reserved") %></div>
+    38: <% end %>
+    39: <% #END OF YIELD DEFINITION %>
+    40: 
+  app/views/layouts/application.html.erb:37:in `block in _app_views_layouts_application_html_erb__4595081995919909809_35368640'
+  app/views/layouts/application.html.erb:35:in `_app_views_layouts_application_html_erb__4595081995919909809_35368640'
+  app/controllers/users_controller.rb:7:in `index'
+
+
+  Rendered /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.5ms)
+  Rendered /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2012-08-11 12:52:10 +0200
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` [0m
+  Rendered users/index.html.erb within layouts/application (0.4ms)
+Completed 500 Internal Server Error in 13ms
+
+ActionView::Template::Error (Current textdomain (nil) was not added, use FastGettext.add_text_domain !):
+    34: 
+    35: <% content_for :footer do %>
+    36: 
+    37: 				<%#=  _("MetaRails Generator Powered by ")%><%= link_to"Innova Experience @ 2011","http://www.innovaxp.com/es/" %><%=_("- All Rights Reserved") %></div>
+    38: <% end %>
+    39: <% #END OF YIELD DEFINITION %>
+    40: 
+  app/views/layouts/application.html.erb:37:in `block in _app_views_layouts_application_html_erb__4595081995919909809_24761240'
+  app/views/layouts/application.html.erb:35:in `_app_views_layouts_application_html_erb__4595081995919909809_24761240'
+  app/controllers/users_controller.rb:7:in `index'
+
+
+  Rendered /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.5ms)
+  Rendered /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2012-08-11 12:52:26 +0200
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` 
+  Rendered users/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 43ms (Views: 41.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-08-11 12:52:26 +0200
+Served asset /application.css - 304 Not Modified (22ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.css?body=1" for 127.0.0.1 at 2012-08-11 12:52:27 +0200
+Served asset /jquery.fancybox-1.3.4.css - 200 OK (2ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2012-08-11 12:52:27 +0200
+Served asset /comments.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2012-08-11 12:52:27 +0200
+Served asset /categories.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.ui.css?body=1" for 127.0.0.1 at 2012-08-11 12:52:27 +0200
+Served asset /jquery.ui.css - 200 OK (4ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-08-11 12:52:27 +0200
+Served asset /posts.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-08-11 12:52:27 +0200
+Served asset /scaffolds.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-08-11 12:52:27 +0200
+Served asset /users.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-08-11 12:52:27 +0200
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-08-11 12:52:27 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2012-08-11 12:52:27 +0200
+Served asset /categories.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2012-08-11 12:52:27 +0200
+Served asset /comments.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.js?body=1" for 127.0.0.1 at 2012-08-11 12:52:27 +0200
+Served asset /jquery.fancybox-1.3.4.js - 200 OK (3ms)
+
+
+Started GET "/assets/jquery.form.js?body=1" for 127.0.0.1 at 2012-08-11 12:52:27 +0200
+Served asset /jquery.form.js - 200 OK (3ms)
+
+
+Started GET "/assets/jquery.snippet.min.js?body=1" for 127.0.0.1 at 2012-08-11 12:52:27 +0200
+Served asset /jquery.snippet.min.js - 200 OK (2ms)
+
+
+Started GET "/assets/jquery.qtip.js?body=1" for 127.0.0.1 at 2012-08-11 12:52:27 +0200
+Served asset /jquery.qtip.js - 200 OK (3ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-08-11 12:52:27 +0200
+Served asset /posts.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-08-11 12:52:27 +0200
+Served asset /users.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-08-11 12:52:27 +0200
+Served asset /application.js - 304 Not Modified (15ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2012-08-11 13:48:07 +0200
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` [0m
+  Rendered users/index.html.erb within layouts/application (0.4ms)
+Compiled iphone.css  (17ms)  (pid 7954)
+Compiled application.css  (62ms)  (pid 7954)
+Completed 200 OK in 87ms (Views: 85.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-08-11 13:48:07 +0200
+Served asset /application.css - 304 Not Modified (24ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.css?body=1" for 127.0.0.1 at 2012-08-11 13:48:07 +0200
+Served asset /jquery.fancybox-1.3.4.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/iphone.css?body=1" for 127.0.0.1 at 2012-08-11 13:48:07 +0200
+Served asset /iphone.css - 200 OK (4ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2012-08-11 13:48:07 +0200
+Served asset /comments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2012-08-11 13:48:07 +0200
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.css?body=1" for 127.0.0.1 at 2012-08-11 13:48:07 +0200
+Served asset /jquery.ui.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-08-11 13:48:07 +0200
+Served asset /posts.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-08-11 13:48:07 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-08-11 13:48:07 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-08-11 13:48:07 +0200
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-08-11 13:48:07 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2012-08-11 13:48:07 +0200
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2012-08-11 13:48:07 +0200
+Served asset /comments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.js?body=1" for 127.0.0.1 at 2012-08-11 13:48:07 +0200
+Served asset /jquery.fancybox-1.3.4.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.form.js?body=1" for 127.0.0.1 at 2012-08-11 13:48:07 +0200
+Served asset /jquery.form.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.snippet.min.js?body=1" for 127.0.0.1 at 2012-08-11 13:48:07 +0200
+Served asset /jquery.snippet.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.qtip.js?body=1" for 127.0.0.1 at 2012-08-11 13:48:07 +0200
+Served asset /jquery.qtip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-08-11 13:48:07 +0200
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-08-11 13:48:07 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-08-11 13:48:07 +0200
+Served asset /application.js - 304 Not Modified (41ms)
+
+
+Started GET "/assets/menu-images/users.png" for 127.0.0.1 at 2012-08-11 13:48:08 +0200
+Served asset /menu-images/users.png - 404 Not Found (20ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/menu-images/users.png"):
+  actionpack (3.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.2) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.2) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.2) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/static.rb:61:in `call'
+  railties (3.2.2) lib/rails/engine.rb:479:in `call'
+  railties (3.2.2) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.2) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /home/alex/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/alex/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/alex/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/assets/menu-images/users-hover.png" for 127.0.0.1 at 2012-08-11 15:57:53 +0200
+Served asset /menu-images/users-hover.png - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/menu-images/users-hover.png"):
+  actionpack (3.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.2) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.2) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.2) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/static.rb:61:in `call'
+  railties (3.2.2) lib/rails/engine.rb:479:in `call'
+  railties (3.2.2) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.2) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /home/alex/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/alex/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/alex/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2012-08-11 16:39:38 +0200
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` 
+  Rendered users/index.html.erb within layouts/application (0.4ms)
+Compiled compilando.css  (17ms)  (pid 7954)
+Compiled application.css  (24ms)  (pid 7954)
+Completed 200 OK in 82ms (Views: 80.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-08-11 16:39:38 +0200
+Served asset /application.css - 304 Not Modified (22ms)
+
+
+Started GET "/assets/compilando.css?body=1" for 127.0.0.1 at 2012-08-11 16:39:38 +0200
+Served asset /compilando.css - 200 OK (4ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2012-08-11 16:39:38 +0200
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2012-08-11 16:39:38 +0200
+Served asset /comments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.css?body=1" for 127.0.0.1 at 2012-08-11 16:39:38 +0200
+Served asset /jquery.fancybox-1.3.4.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.css?body=1" for 127.0.0.1 at 2012-08-11 16:39:38 +0200
+Served asset /jquery.ui.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-08-11 16:39:38 +0200
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-08-11 16:39:38 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-08-11 16:39:38 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-08-11 16:39:38 +0200
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-08-11 16:39:38 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2012-08-11 16:39:38 +0200
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2012-08-11 16:39:38 +0200
+Served asset /comments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.form.js?body=1" for 127.0.0.1 at 2012-08-11 16:39:38 +0200
+Served asset /jquery.form.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.js?body=1" for 127.0.0.1 at 2012-08-11 16:39:38 +0200
+Served asset /jquery.fancybox-1.3.4.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.qtip.js?body=1" for 127.0.0.1 at 2012-08-11 16:39:38 +0200
+Served asset /jquery.qtip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.snippet.min.js?body=1" for 127.0.0.1 at 2012-08-11 16:39:38 +0200
+Served asset /jquery.snippet.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-08-11 16:39:38 +0200
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-08-11 16:39:38 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-08-11 16:39:38 +0200
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/menu-images/users.png" for 127.0.0.1 at 2012-08-11 16:39:38 +0200
+Served asset /menu-images/users.png - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/menu-images/users.png"):
+  actionpack (3.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.2) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.2) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.2) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/static.rb:61:in `call'
+  railties (3.2.2) lib/rails/engine.rb:479:in `call'
+  railties (3.2.2) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.2) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /home/alex/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/alex/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/alex/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/assets/menu-images/users-hover.png" for 127.0.0.1 at 2012-08-11 16:39:48 +0200
+Served asset /menu-images/users-hover.png - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/menu-images/users-hover.png"):
+  actionpack (3.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.2) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.2) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.2) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/static.rb:61:in `call'
+  railties (3.2.2) lib/rails/engine.rb:479:in `call'
+  railties (3.2.2) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.2) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /home/alex/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/alex/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/alex/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2012-08-11 16:41:01 +0200
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` [0m
+  Rendered users/index.html.erb within layouts/application (0.4ms)
+Compiled compilando.css  (52ms)  (pid 7954)
+Compiled application.css  (2ms)  (pid 7954)
+Completed 200 OK in 83ms (Views: 82.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2012-08-11 16:41:01 +0200
+Served asset /comments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-08-11 16:41:01 +0200
+Served asset /application.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/jquery.ui.css?body=1" for 127.0.0.1 at 2012-08-11 16:41:01 +0200
+Served asset /jquery.ui.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2012-08-11 16:41:01 +0200
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/compilando.css?body=1" for 127.0.0.1 at 2012-08-11 16:41:01 +0200
+Served asset /compilando.css - 200 OK (2ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.css?body=1" for 127.0.0.1 at 2012-08-11 16:41:01 +0200
+Served asset /jquery.fancybox-1.3.4.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-08-11 16:41:01 +0200
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-08-11 16:41:01 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-08-11 16:41:01 +0200
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-08-11 16:41:01 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-08-11 16:41:01 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2012-08-11 16:41:01 +0200
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2012-08-11 16:41:01 +0200
+Served asset /comments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.js?body=1" for 127.0.0.1 at 2012-08-11 16:41:01 +0200
+Served asset /jquery.fancybox-1.3.4.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.form.js?body=1" for 127.0.0.1 at 2012-08-11 16:41:01 +0200
+Served asset /jquery.form.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.qtip.js?body=1" for 127.0.0.1 at 2012-08-11 16:41:01 +0200
+Served asset /jquery.qtip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.snippet.min.js?body=1" for 127.0.0.1 at 2012-08-11 16:41:01 +0200
+Served asset /jquery.snippet.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-08-11 16:41:01 +0200
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-08-11 16:41:01 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-08-11 16:41:01 +0200
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2012-08-11 16:43:16 +0200
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` 
+  Rendered users/index.html.erb within layouts/application (0.4ms)
+Compiled compilando.css  (3ms)  (pid 7954)
+Compiled application.css  (2ms)  (pid 7954)
+Completed 200 OK in 65ms (Views: 63.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-08-11 16:43:16 +0200
+Served asset /application.css - 304 Not Modified (26ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2012-08-11 16:43:16 +0200
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2012-08-11 16:43:16 +0200
+Served asset /comments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.css?body=1" for 127.0.0.1 at 2012-08-11 16:43:16 +0200
+Served asset /jquery.fancybox-1.3.4.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/compilando.css?body=1" for 127.0.0.1 at 2012-08-11 16:43:16 +0200
+Served asset /compilando.css - 200 OK (2ms)
+
+
+Started GET "/assets/jquery.ui.css?body=1" for 127.0.0.1 at 2012-08-11 16:43:16 +0200
+Served asset /jquery.ui.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-08-11 16:43:16 +0200
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-08-11 16:43:16 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-08-11 16:43:16 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-08-11 16:43:16 +0200
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-08-11 16:43:16 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2012-08-11 16:43:16 +0200
+Served asset /comments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.js?body=1" for 127.0.0.1 at 2012-08-11 16:43:16 +0200
+Served asset /jquery.fancybox-1.3.4.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2012-08-11 16:43:16 +0200
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.form.js?body=1" for 127.0.0.1 at 2012-08-11 16:43:16 +0200
+Served asset /jquery.form.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.qtip.js?body=1" for 127.0.0.1 at 2012-08-11 16:43:16 +0200
+Served asset /jquery.qtip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.snippet.min.js?body=1" for 127.0.0.1 at 2012-08-11 16:43:16 +0200
+Served asset /jquery.snippet.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-08-11 16:43:16 +0200
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-08-11 16:43:16 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-08-11 16:43:16 +0200
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2012-08-11 17:58:37 +0200
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` [0m
+  Rendered users/index.html.erb within layouts/application (0.4ms)
+Compiled compilando.css  (2ms)  (pid 7954)
+Compiled application.css  (2ms)  (pid 7954)
+Completed 200 OK in 32ms (Views: 30.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-08-11 17:58:37 +0200
+Served asset /application.css - 304 Not Modified (26ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2012-08-11 17:58:37 +0200
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/compilando.css?body=1" for 127.0.0.1 at 2012-08-11 17:58:37 +0200
+Served asset /compilando.css - 200 OK (3ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2012-08-11 17:58:37 +0200
+Served asset /comments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.css?body=1" for 127.0.0.1 at 2012-08-11 17:58:37 +0200
+Served asset /jquery.fancybox-1.3.4.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.css?body=1" for 127.0.0.1 at 2012-08-11 17:58:37 +0200
+Served asset /jquery.ui.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-08-11 17:58:37 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-08-11 17:58:37 +0200
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-08-11 17:58:37 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-08-11 17:58:37 +0200
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-08-11 17:58:37 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2012-08-11 17:58:37 +0200
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2012-08-11 17:58:37 +0200
+Served asset /comments.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.js?body=1" for 127.0.0.1 at 2012-08-11 17:58:37 +0200
+Served asset /jquery.fancybox-1.3.4.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.form.js?body=1" for 127.0.0.1 at 2012-08-11 17:58:37 +0200
+Served asset /jquery.form.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.qtip.js?body=1" for 127.0.0.1 at 2012-08-11 17:58:37 +0200
+Served asset /jquery.qtip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.snippet.min.js?body=1" for 127.0.0.1 at 2012-08-11 17:58:37 +0200
+Served asset /jquery.snippet.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-08-11 17:58:37 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-08-11 17:58:37 +0200
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-08-11 17:58:37 +0200
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2012-08-11 17:58:53 +0200
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` 
+  Rendered users/index.html.erb within layouts/application (0.4ms)
+Compiled compilando.css  (2ms)  (pid 7954)
+Compiled application.css  (2ms)  (pid 7954)
+Completed 200 OK in 79ms (Views: 78.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-08-11 17:58:53 +0200
+Served asset /application.css - 304 Not Modified (19ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2012-08-11 17:58:53 +0200
+Served asset /comments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2012-08-11 17:58:53 +0200
+Served asset /categories.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.css?body=1" for 127.0.0.1 at 2012-08-11 17:58:53 +0200
+Served asset /jquery.fancybox-1.3.4.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/compilando.css?body=1" for 127.0.0.1 at 2012-08-11 17:58:53 +0200
+Served asset /compilando.css - 200 OK (3ms)
+
+
+Started GET "/assets/jquery.ui.css?body=1" for 127.0.0.1 at 2012-08-11 17:58:53 +0200
+Served asset /jquery.ui.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-08-11 17:58:53 +0200
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-08-11 17:58:53 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-08-11 17:58:53 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-08-11 17:58:53 +0200
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2012-08-11 17:58:53 +0200
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-08-11 17:58:53 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2012-08-11 17:58:53 +0200
+Served asset /comments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.js?body=1" for 127.0.0.1 at 2012-08-11 17:58:53 +0200
+Served asset /jquery.fancybox-1.3.4.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.form.js?body=1" for 127.0.0.1 at 2012-08-11 17:58:53 +0200
+Served asset /jquery.form.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.qtip.js?body=1" for 127.0.0.1 at 2012-08-11 17:58:53 +0200
+Served asset /jquery.qtip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.snippet.min.js?body=1" for 127.0.0.1 at 2012-08-11 17:58:53 +0200
+Served asset /jquery.snippet.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-08-11 17:58:53 +0200
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-08-11 17:58:53 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-08-11 17:58:53 +0200
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2012-08-11 18:02:27 +0200
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` [0m
+  Rendered users/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 21ms (Views: 20.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-08-11 18:02:27 +0200
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2012-08-11 18:02:27 +0200
+Served asset /comments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/compilando.css?body=1" for 127.0.0.1 at 2012-08-11 18:02:27 +0200
+Served asset /compilando.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-08-11 18:02:27 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-08-11 18:02:27 +0200
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2012-08-11 18:02:27 +0200
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.css?body=1" for 127.0.0.1 at 2012-08-11 18:02:27 +0200
+Served asset /jquery.fancybox-1.3.4.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-08-11 18:02:27 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.css?body=1" for 127.0.0.1 at 2012-08-11 18:02:27 +0200
+Served asset /jquery.ui.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-08-11 18:02:27 +0200
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-08-11 18:02:27 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2012-08-11 18:02:27 +0200
+Served asset /comments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2012-08-11 18:02:27 +0200
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.js?body=1" for 127.0.0.1 at 2012-08-11 18:02:27 +0200
+Served asset /jquery.fancybox-1.3.4.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.form.js?body=1" for 127.0.0.1 at 2012-08-11 18:02:27 +0200
+Served asset /jquery.form.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.qtip.js?body=1" for 127.0.0.1 at 2012-08-11 18:02:27 +0200
+Served asset /jquery.qtip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.snippet.min.js?body=1" for 127.0.0.1 at 2012-08-11 18:02:27 +0200
+Served asset /jquery.snippet.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-08-11 18:02:27 +0200
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-08-11 18:02:27 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-08-11 18:02:27 +0200
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2012-08-11 18:04:09 +0200
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` 
+  Rendered users/index.html.erb within layouts/application (0.5ms)
+Compiled compilando.css  (3ms)  (pid 7954)
+Compiled application.css  (2ms)  (pid 7954)
+Completed 200 OK in 40ms (Views: 39.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-08-11 18:04:10 +0200
+Served asset /application.css - 304 Not Modified (28ms)
+
+
+Started GET "/assets/compilando.css?body=1" for 127.0.0.1 at 2012-08-11 18:04:10 +0200
+Served asset /compilando.css - 200 OK (4ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2012-08-11 18:04:10 +0200
+Served asset /comments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.css?body=1" for 127.0.0.1 at 2012-08-11 18:04:10 +0200
+Served asset /jquery.fancybox-1.3.4.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2012-08-11 18:04:10 +0200
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.css?body=1" for 127.0.0.1 at 2012-08-11 18:04:10 +0200
+Served asset /jquery.ui.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-08-11 18:04:10 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-08-11 18:04:10 +0200
+Served asset /scaffolds.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-08-11 18:04:10 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-08-11 18:04:10 +0200
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2012-08-11 18:04:10 +0200
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-08-11 18:04:10 +0200
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2012-08-11 18:04:10 +0200
+Served asset /comments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.js?body=1" for 127.0.0.1 at 2012-08-11 18:04:10 +0200
+Served asset /jquery.fancybox-1.3.4.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.form.js?body=1" for 127.0.0.1 at 2012-08-11 18:04:10 +0200
+Served asset /jquery.form.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.qtip.js?body=1" for 127.0.0.1 at 2012-08-11 18:04:10 +0200
+Served asset /jquery.qtip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-08-11 18:04:10 +0200
+Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-08-11 18:04:10 +0200
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-08-11 18:04:10 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.snippet.min.js?body=1" for 127.0.0.1 at 2012-08-11 18:04:10 +0200
+Served asset /jquery.snippet.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2012-08-11 18:04:28 +0200
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` [0m
+  Rendered users/index.html.erb within layouts/application (0.6ms)
+Compiled compilando.css  (2ms)  (pid 7954)
+Compiled application.css  (4ms)  (pid 7954)
+Completed 200 OK in 72ms (Views: 70.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-08-11 18:04:28 +0200
+Served asset /application.css - 304 Not Modified (33ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.css?body=1" for 127.0.0.1 at 2012-08-11 18:04:28 +0200
+Served asset /jquery.fancybox-1.3.4.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/compilando.css?body=1" for 127.0.0.1 at 2012-08-11 18:04:28 +0200
+Served asset /compilando.css - 200 OK (5ms)
+
+
+Started GET "/assets/jquery.ui.css?body=1" for 127.0.0.1 at 2012-08-11 18:04:28 +0200
+Served asset /jquery.ui.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2012-08-11 18:04:28 +0200
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2012-08-11 18:04:28 +0200
+Served asset /comments.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-08-11 18:04:28 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-08-11 18:04:28 +0200
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-08-11 18:04:28 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-08-11 18:04:28 +0200
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-08-11 18:04:28 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2012-08-11 18:04:28 +0200
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.js?body=1" for 127.0.0.1 at 2012-08-11 18:04:28 +0200
+Served asset /jquery.fancybox-1.3.4.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2012-08-11 18:04:28 +0200
+Served asset /comments.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery.form.js?body=1" for 127.0.0.1 at 2012-08-11 18:04:28 +0200
+Served asset /jquery.form.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.snippet.min.js?body=1" for 127.0.0.1 at 2012-08-11 18:04:28 +0200
+Served asset /jquery.snippet.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.qtip.js?body=1" for 127.0.0.1 at 2012-08-11 18:04:28 +0200
+Served asset /jquery.qtip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-08-11 18:04:28 +0200
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-08-11 18:04:28 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-08-11 18:04:28 +0200
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2012-08-11 18:06:11 +0200
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` 
+  Rendered users/index.html.erb within layouts/application (0.4ms)
+Compiled compilando.css  (2ms)  (pid 7954)
+Compiled application.css  (2ms)  (pid 7954)
+Completed 200 OK in 33ms (Views: 32.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-08-11 18:06:11 +0200
+Served asset /application.css - 304 Not Modified (27ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2012-08-11 18:06:11 +0200
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2012-08-11 18:06:11 +0200
+Served asset /comments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/compilando.css?body=1" for 127.0.0.1 at 2012-08-11 18:06:11 +0200
+Served asset /compilando.css - 200 OK (2ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.css?body=1" for 127.0.0.1 at 2012-08-11 18:06:11 +0200
+Served asset /jquery.fancybox-1.3.4.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.css?body=1" for 127.0.0.1 at 2012-08-11 18:06:11 +0200
+Served asset /jquery.ui.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-08-11 18:06:11 +0200
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-08-11 18:06:11 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-08-11 18:06:11 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-08-11 18:06:11 +0200
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-08-11 18:06:11 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2012-08-11 18:06:11 +0200
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2012-08-11 18:06:11 +0200
+Served asset /comments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.js?body=1" for 127.0.0.1 at 2012-08-11 18:06:11 +0200
+Served asset /jquery.fancybox-1.3.4.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.form.js?body=1" for 127.0.0.1 at 2012-08-11 18:06:11 +0200
+Served asset /jquery.form.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.qtip.js?body=1" for 127.0.0.1 at 2012-08-11 18:06:11 +0200
+Served asset /jquery.qtip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.snippet.min.js?body=1" for 127.0.0.1 at 2012-08-11 18:06:11 +0200
+Served asset /jquery.snippet.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-08-11 18:06:11 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-08-11 18:06:11 +0200
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-08-11 18:06:11 +0200
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2012-08-11 18:06:13 +0200
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` [0m
+  Rendered users/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 53ms (Views: 52.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2012-08-11 18:06:14 +0200
+Served asset /categories.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-08-11 18:06:14 +0200
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.css?body=1" for 127.0.0.1 at 2012-08-11 18:06:14 +0200
+Served asset /jquery.fancybox-1.3.4.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2012-08-11 18:06:14 +0200
+Served asset /comments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/compilando.css?body=1" for 127.0.0.1 at 2012-08-11 18:06:14 +0200
+Served asset /compilando.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.css?body=1" for 127.0.0.1 at 2012-08-11 18:06:14 +0200
+Served asset /jquery.ui.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-08-11 18:06:14 +0200
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-08-11 18:06:14 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-08-11 18:06:14 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-08-11 18:06:14 +0200
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-08-11 18:06:14 +0200
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2012-08-11 18:06:14 +0200
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.js?body=1" for 127.0.0.1 at 2012-08-11 18:06:14 +0200
+Served asset /jquery.fancybox-1.3.4.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2012-08-11 18:06:14 +0200
+Served asset /comments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.qtip.js?body=1" for 127.0.0.1 at 2012-08-11 18:06:14 +0200
+Served asset /jquery.qtip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.form.js?body=1" for 127.0.0.1 at 2012-08-11 18:06:14 +0200
+Served asset /jquery.form.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-08-11 18:06:14 +0200
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.snippet.min.js?body=1" for 127.0.0.1 at 2012-08-11 18:06:14 +0200
+Served asset /jquery.snippet.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-08-11 18:06:14 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-08-11 18:06:14 +0200
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2012-08-11 18:07:20 +0200
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` 
+  Rendered users/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 14ms (Views: 12.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-08-11 18:07:20 +0200
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2012-08-11 18:07:20 +0200
+Served asset /categories.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2012-08-11 18:07:20 +0200
+Served asset /comments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-08-11 18:07:20 +0200
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/compilando.css?body=1" for 127.0.0.1 at 2012-08-11 18:07:20 +0200
+Served asset /compilando.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.css?body=1" for 127.0.0.1 at 2012-08-11 18:07:20 +0200
+Served asset /jquery.fancybox-1.3.4.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-08-11 18:07:20 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-08-11 18:07:20 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.css?body=1" for 127.0.0.1 at 2012-08-11 18:07:20 +0200
+Served asset /jquery.ui.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-08-11 18:07:20 +0200
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-08-11 18:07:20 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2012-08-11 18:07:20 +0200
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2012-08-11 18:07:20 +0200
+Served asset /comments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.js?body=1" for 127.0.0.1 at 2012-08-11 18:07:20 +0200
+Served asset /jquery.fancybox-1.3.4.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.form.js?body=1" for 127.0.0.1 at 2012-08-11 18:07:20 +0200
+Served asset /jquery.form.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.qtip.js?body=1" for 127.0.0.1 at 2012-08-11 18:07:20 +0200
+Served asset /jquery.qtip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.snippet.min.js?body=1" for 127.0.0.1 at 2012-08-11 18:07:20 +0200
+Served asset /jquery.snippet.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-08-11 18:07:20 +0200
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-08-11 18:07:20 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-08-11 18:07:20 +0200
+Served asset /application.js - 304 Not Modified (37ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2012-08-11 18:07:43 +0200
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` [0m
+  Rendered users/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 14ms (Views: 12.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2012-08-11 18:07:43 +0200
+Served asset /categories.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-08-11 18:07:43 +0200
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2012-08-11 18:07:43 +0200
+Served asset /comments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.css?body=1" for 127.0.0.1 at 2012-08-11 18:07:43 +0200
+Served asset /jquery.fancybox-1.3.4.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/compilando.css?body=1" for 127.0.0.1 at 2012-08-11 18:07:43 +0200
+Served asset /compilando.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.css?body=1" for 127.0.0.1 at 2012-08-11 18:07:43 +0200
+Served asset /jquery.ui.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-08-11 18:07:43 +0200
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-08-11 18:07:43 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-08-11 18:07:43 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-08-11 18:07:43 +0200
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-08-11 18:07:43 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2012-08-11 18:07:43 +0200
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2012-08-11 18:07:43 +0200
+Served asset /comments.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.js?body=1" for 127.0.0.1 at 2012-08-11 18:07:43 +0200
+Served asset /jquery.fancybox-1.3.4.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.form.js?body=1" for 127.0.0.1 at 2012-08-11 18:07:43 +0200
+Served asset /jquery.form.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.qtip.js?body=1" for 127.0.0.1 at 2012-08-11 18:07:43 +0200
+Served asset /jquery.qtip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-08-11 18:07:43 +0200
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.snippet.min.js?body=1" for 127.0.0.1 at 2012-08-11 18:07:43 +0200
+Served asset /jquery.snippet.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-08-11 18:07:43 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-08-11 18:07:43 +0200
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2012-08-11 18:08:52 +0200
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` 
+  Rendered users/index.html.erb within layouts/application (0.5ms)
+ERROR: compiling _app_views_layouts_application_html_erb__4595081995919909809_33994520 RAISED /var/www/compilandoideas/trunk/app/views/layouts/application.html.erb:94: syntax error, unexpected keyword_ensure, expecting $end
+Function body:           def _app_views_layouts_application_html_erb__4595081995919909809_33994520(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "layouts/application";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_concat('<!DOCTYPE html>
+<html>
+	<head>
+		<title>Compilando Ideas</title>
+
+		');@output_buffer.append= ( stylesheet_link_tag "application" );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('
+		');@output_buffer.append= ( javascript_include_tag "application" );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('
+		');@output_buffer.append= ( csrf_meta_tag );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('
+		<link rel="icon" href="/favicon.ico" type="image/ico" />
+		<link rel="shortcut icon" href="/favicon.ico" type="image/ico" />
+
+	</head>
+'); content_for :header do 
+@output_buffer.safe_concat('          <div id="tittle">
+            <h1 id="maintitle">');;@output_buffer.safe_concat('</h1>
+          </div>
+
+'); content_for :footer do 
+@output_buffer.safe_concat('
+        <div>	');;@output_buffer.append= ( link_to"Innova Experience @ 2011","http://www.innovaxp.com/es/" );;@output_buffer.safe_concat('</div>
+'); end 
+ #END OF YIELD DEFINITION 
+ content_for :sidebar_left  do 
+@output_buffer.safe_concat('
+');     if session && session[:role] == "admin" 
+@output_buffer.safe_concat('      <div id="menu-big">
+');       else 
+@output_buffer.safe_concat('        <div id="menu">
+');         end 
+@output_buffer.safe_concat('        <ul>
+    
+          <li id="users">
+            <a href="/users/');@output_buffer.append= (session[:user_id]);@output_buffer.safe_concat('">Perfil</a>
+          </li>
+    
+        </ul>
+      </div>
+');     end 
+@output_buffer.safe_concat('  </div>
+');end
+@output_buffer.safe_concat('
+
+'); content_for :sidebar_right  do 
+@output_buffer.safe_concat('
+');     if session && session[:role] == "admin" 
+@output_buffer.safe_concat('      <div id="menu-big">
+');       else 
+@output_buffer.safe_concat('        <div id="menu">
+');         end 
+@output_buffer.safe_concat('        <ul>
+
+          <li id="users">
+            <a href="/users/');@output_buffer.append= (session[:user_id]);@output_buffer.safe_concat('">Perfil</a>
+          </li>
+
+        </ul>
+      </div>
+');     end 
+@output_buffer.safe_concat('  </div>
+');end
+@output_buffer.safe_concat('
+
+<body>
+	<div id="out-contain">
+		<div id="contain">
+			<div id="header">
+				');@output_buffer.append= ( yield :header );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('			</div>
+                  <div style="margin-top:15px;clear:both;"><hr/></div>
+			<div id="main">
+                                <div id="left">
+					');@output_buffer.append= ( yield :sidebar_right );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('				</div>
+				<div id="content">
+					');@output_buffer.append= ( yield );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('				</div>
+                                <div id="sidebar">
+					');@output_buffer.append= ( yield :sidebar_right );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('				</div>
+			</div>
+
+		</div>
+		<div id="footer">
+			');@output_buffer.append= ( yield :footer );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('		</div>
+		</div>
+
+
+</body>
+</html>');@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_view/template.rb:285:in `module_eval'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_view/template.rb:285:in `compile'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_view/template.rb:233:in `compile!'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_view/template.rb:142:in `block in render'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.2.2/lib/active_support/notifications.rb:125:in `instrument'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_view/template.rb:141:in `render'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_view/renderer/template_renderer.rb:54:in `render_with_layout'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_view/renderer/template_renderer.rb:40:in `render_template'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_view/renderer/template_renderer.rb:13:in `render'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_view/renderer/renderer.rb:36:in `render_template'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_view/renderer/renderer.rb:17:in `render'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/abstract_controller/rendering.rb:109:in `_render_template'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_controller/metal/streaming.rb:225:in `_render_template'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/abstract_controller/rendering.rb:103:in `render_to_body'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/abstract_controller/rendering.rb:88:in `render'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_controller/metal/rendering.rb:16:in `render'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.2.2/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/home/alex/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/benchmark.rb:310:in `realtime'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.2.2/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/activerecord-3.2.2/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_controller/metal/mime_responds.rb:196:in `respond_to'
+/var/www/compilandoideas/trunk/app/controllers/users_controller.rb:7:in `index'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/abstract_controller/base.rb:167:in `process_action'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.2.2/lib/active_support/callbacks.rb:414:in `_run__892895446531508323__process_action__1614598821815009399__callbacks'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.2.2/lib/active_support/callbacks.rb:405:in `__run_callback'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.2.2/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.2.2/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.2.2/lib/active_support/notifications.rb:123:in `block in instrument'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.2.2/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.2.2/lib/active_support/notifications.rb:123:in `instrument'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_controller/metal/params_wrapper.rb:205:in `process_action'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/activerecord-3.2.2/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/abstract_controller/base.rb:121:in `process'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/abstract_controller/rendering.rb:45:in `process'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_controller/metal.rb:203:in `dispatch'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_controller/metal.rb:246:in `block in action'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/routing/route_set.rb:67:in `call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/routing/route_set.rb:67:in `dispatch'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/routing/route_set.rb:30:in `call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/journey-1.0.4/lib/journey/router.rb:68:in `block in call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/journey-1.0.4/lib/journey/router.rb:56:in `each'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/journey-1.0.4/lib/journey/router.rb:56:in `call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/routing/route_set.rb:594:in `call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/rack-1.4.1/lib/rack/etag.rb:23:in `call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/rack-1.4.1/lib/rack/conditionalget.rb:25:in `call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/head.rb:14:in `call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/flash.rb:242:in `call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/rack-1.4.1/lib/rack/session/abstract/id.rb:205:in `context'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/rack-1.4.1/lib/rack/session/abstract/id.rb:200:in `call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/cookies.rb:338:in `call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/activerecord-3.2.2/lib/active_record/query_cache.rb:64:in `call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/activerecord-3.2.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:443:in `call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.2.2/lib/active_support/callbacks.rb:405:in `_run__3259306539132500706__call__1325804394400366835__callbacks'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.2.2/lib/active_support/callbacks.rb:405:in `__run_callback'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.2.2/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.2.2/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/reloader.rb:65:in `call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/railties-3.2.2/lib/rails/rack/logger.rb:26:in `call_app'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/railties-3.2.2/lib/rails/rack/logger.rb:16:in `call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/rack-1.4.1/lib/rack/methodoverride.rb:21:in `call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/rack-1.4.1/lib/rack/runtime.rb:17:in `call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.2.2/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/rack-1.4.1/lib/rack/lock.rb:15:in `call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/static.rb:61:in `call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/railties-3.2.2/lib/rails/engine.rb:479:in `call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/railties-3.2.2/lib/rails/application.rb:220:in `call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/rack-1.4.1/lib/rack/content_length.rb:14:in `call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/railties-3.2.2/lib/rails/rack/log_tailer.rb:14:in `call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/rack-1.4.1/lib/rack/handler/webrick.rb:59:in `service'
+/home/alex/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/home/alex/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/home/alex/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+Completed 500 Internal Server Error in 5ms
+
+ActionView::Template::Error (/var/www/compilandoideas/trunk/app/views/layouts/application.html.erb:94: syntax error, unexpected keyword_ensure, expecting $end):
+    91: 
+    92: </body>
+    93: </html>
+  app/controllers/users_controller.rb:7:in `index'
+
+
+  Rendered /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.4ms)
+  Rendered /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2012-08-11 18:09:07 +0200
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` [0m
+  Rendered users/index.html.erb within layouts/application (0.4ms)
+ERROR: compiling _app_views_layouts_application_html_erb__4595081995919909809_25106260 RAISED /var/www/compilandoideas/trunk/app/views/layouts/application.html.erb:94: syntax error, unexpected keyword_ensure, expecting $end
+Function body:           def _app_views_layouts_application_html_erb__4595081995919909809_25106260(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "layouts/application";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_concat('<!DOCTYPE html>
+<html>
+	<head>
+		<title>Compilando Ideas</title>
+
+		');@output_buffer.append= ( stylesheet_link_tag "application" );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('
+		');@output_buffer.append= ( javascript_include_tag "application" );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('
+		');@output_buffer.append= ( csrf_meta_tag );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('
+		<link rel="icon" href="/favicon.ico" type="image/ico" />
+		<link rel="shortcut icon" href="/favicon.ico" type="image/ico" />
+
+	</head>
+'); content_for :header do 
+@output_buffer.safe_concat('          <div id="tittle">
+            <h1 id="maintitle">');;@output_buffer.safe_concat('</h1>
+          </div>
+
+'); content_for :footer do 
+@output_buffer.safe_concat('
+        <div>	');;@output_buffer.append= ( link_to"Innova Experience @ 2011","http://www.innovaxp.com/es/" );;@output_buffer.safe_concat('</div>
+'); end 
+ #END OF YIELD DEFINITION 
+ content_for :sidebar_left  do 
+@output_buffer.safe_concat('
+');     if session && session[:role] == "admin" 
+@output_buffer.safe_concat('      <div id="menu-big">
+');       else 
+@output_buffer.safe_concat('        <div id="menu">
+');         end 
+@output_buffer.safe_concat('        <ul>
+    
+          <li id="users">
+            <a href="/users/');@output_buffer.append= (session[:user_id]);@output_buffer.safe_concat('">Perfil</a>
+          </li>
+    
+        </ul>
+      </div>
+');     end 
+@output_buffer.safe_concat('  </div>
+');end
+@output_buffer.safe_concat('
+
+'); content_for :sidebar_right  do 
+@output_buffer.safe_concat('
+');     if session && session[:role] == "admin" 
+@output_buffer.safe_concat('      <div id="menu-big">
+');       else 
+@output_buffer.safe_concat('        <div id="menu">
+');         end 
+@output_buffer.safe_concat('        <ul>
+
+          <li id="users">
+            <a href="/users/');@output_buffer.append= (session[:user_id]);@output_buffer.safe_concat('">Perfil</a>
+          </li>
+
+        </ul>
+      </div>
+');     end 
+@output_buffer.safe_concat('  </div>
+');end
+@output_buffer.safe_concat('
+
+<body>
+	<div id="out-contain">
+		<div id="contain">
+			<div id="header">
+				');@output_buffer.append= ( yield :header );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('			</div>
+                  <div style="margin-top:15px;clear:both;"><hr/></div>
+			<div id="main">
+                                <div id="left">
+					');@output_buffer.append= ( yield :sidebar_left );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('				</div>
+				<div id="content">
+					');@output_buffer.append= ( yield );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('				</div>
+                                <div id="sidebar">
+					');@output_buffer.append= ( yield :sidebar_right );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('				</div>
+			</div>
+
+		</div>
+		<div id="footer">
+			');@output_buffer.append= ( yield :footer );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('		</div>
+		</div>
+
+
+</body>
+</html>');@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_view/template.rb:285:in `module_eval'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_view/template.rb:285:in `compile'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_view/template.rb:233:in `compile!'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_view/template.rb:142:in `block in render'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.2.2/lib/active_support/notifications.rb:125:in `instrument'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_view/template.rb:141:in `render'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_view/renderer/template_renderer.rb:54:in `render_with_layout'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_view/renderer/template_renderer.rb:40:in `render_template'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_view/renderer/template_renderer.rb:13:in `render'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_view/renderer/renderer.rb:36:in `render_template'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_view/renderer/renderer.rb:17:in `render'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/abstract_controller/rendering.rb:109:in `_render_template'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_controller/metal/streaming.rb:225:in `_render_template'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/abstract_controller/rendering.rb:103:in `render_to_body'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/abstract_controller/rendering.rb:88:in `render'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_controller/metal/rendering.rb:16:in `render'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.2.2/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/home/alex/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/benchmark.rb:310:in `realtime'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.2.2/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/activerecord-3.2.2/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_controller/metal/mime_responds.rb:196:in `respond_to'
+/var/www/compilandoideas/trunk/app/controllers/users_controller.rb:7:in `index'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/abstract_controller/base.rb:167:in `process_action'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.2.2/lib/active_support/callbacks.rb:414:in `_run__892895446531508323__process_action__1614598821815009399__callbacks'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.2.2/lib/active_support/callbacks.rb:405:in `__run_callback'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.2.2/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.2.2/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.2.2/lib/active_support/notifications.rb:123:in `block in instrument'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.2.2/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.2.2/lib/active_support/notifications.rb:123:in `instrument'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_controller/metal/params_wrapper.rb:205:in `process_action'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/activerecord-3.2.2/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/abstract_controller/base.rb:121:in `process'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/abstract_controller/rendering.rb:45:in `process'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_controller/metal.rb:203:in `dispatch'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_controller/metal.rb:246:in `block in action'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/routing/route_set.rb:67:in `call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/routing/route_set.rb:67:in `dispatch'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/routing/route_set.rb:30:in `call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/journey-1.0.4/lib/journey/router.rb:68:in `block in call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/journey-1.0.4/lib/journey/router.rb:56:in `each'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/journey-1.0.4/lib/journey/router.rb:56:in `call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/routing/route_set.rb:594:in `call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/rack-1.4.1/lib/rack/etag.rb:23:in `call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/rack-1.4.1/lib/rack/conditionalget.rb:25:in `call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/head.rb:14:in `call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/flash.rb:242:in `call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/rack-1.4.1/lib/rack/session/abstract/id.rb:205:in `context'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/rack-1.4.1/lib/rack/session/abstract/id.rb:200:in `call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/cookies.rb:338:in `call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/activerecord-3.2.2/lib/active_record/query_cache.rb:64:in `call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/activerecord-3.2.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:443:in `call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.2.2/lib/active_support/callbacks.rb:405:in `_run__3259306539132500706__call__1325804394400366835__callbacks'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.2.2/lib/active_support/callbacks.rb:405:in `__run_callback'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.2.2/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.2.2/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/reloader.rb:65:in `call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/railties-3.2.2/lib/rails/rack/logger.rb:26:in `call_app'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/railties-3.2.2/lib/rails/rack/logger.rb:16:in `call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/rack-1.4.1/lib/rack/methodoverride.rb:21:in `call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/rack-1.4.1/lib/rack/runtime.rb:17:in `call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.2.2/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/rack-1.4.1/lib/rack/lock.rb:15:in `call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/static.rb:61:in `call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/railties-3.2.2/lib/rails/engine.rb:479:in `call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/railties-3.2.2/lib/rails/application.rb:220:in `call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/rack-1.4.1/lib/rack/content_length.rb:14:in `call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/railties-3.2.2/lib/rails/rack/log_tailer.rb:14:in `call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/rack-1.4.1/lib/rack/handler/webrick.rb:59:in `service'
+/home/alex/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/home/alex/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/home/alex/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+Completed 500 Internal Server Error in 4ms
+
+ActionView::Template::Error (/var/www/compilandoideas/trunk/app/views/layouts/application.html.erb:94: syntax error, unexpected keyword_ensure, expecting $end):
+    91: 
+    92: </body>
+    93: </html>
+  app/controllers/users_controller.rb:7:in `index'
+
+
+  Rendered /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.2ms)
+  Rendered /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.1ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2012-08-11 18:09:35 +0200
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` 
+  Rendered users/index.html.erb within layouts/application (0.4ms)
+ERROR: compiling _app_views_layouts_application_html_erb__4595081995919909809_23097580 RAISED /var/www/compilandoideas/trunk/app/views/layouts/application.html.erb:94: syntax error, unexpected keyword_ensure, expecting $end
+Function body:           def _app_views_layouts_application_html_erb__4595081995919909809_23097580(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "layouts/application";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_concat('<!DOCTYPE html>
+<html>
+	<head>
+		<title>Compilando Ideas</title>
+
+		');@output_buffer.append= ( stylesheet_link_tag "application" );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('
+		');@output_buffer.append= ( javascript_include_tag "application" );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('
+		');@output_buffer.append= ( csrf_meta_tag );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('
+		<link rel="icon" href="/favicon.ico" type="image/ico" />
+		<link rel="shortcut icon" href="/favicon.ico" type="image/ico" />
+
+	</head>
+'); content_for :header do 
+@output_buffer.safe_concat('          <div id="tittle">
+            <h1 id="maintitle">');;@output_buffer.safe_concat('</h1>
+          </div>
+
+'); content_for :footer do 
+@output_buffer.safe_concat('
+        <div>	');;@output_buffer.append= ( link_to"Innova Experience @ 2011","http://www.innovaxp.com/es/" );;@output_buffer.safe_concat('</div>
+'); end 
+@output_buffer.safe_concat('
+'); content_for :sidebar_left  do 
+@output_buffer.safe_concat('
+');     if session && session[:role] == "admin" 
+@output_buffer.safe_concat('      <div id="menu-big">
+');       else 
+@output_buffer.safe_concat('        <div id="menu">
+');         end 
+@output_buffer.safe_concat('        <ul>
+    
+          <li id="users">
+            <a href="/users/');@output_buffer.append= (session[:user_id]);@output_buffer.safe_concat('">Perfil</a>
+          </li>
+    
+        </ul>
+      </div>
+');     end 
+@output_buffer.safe_concat('  </div>
+');end
+@output_buffer.safe_concat('
+
+'); content_for :sidebar_right  do 
+@output_buffer.safe_concat('
+');     if session && session[:role] == "admin" 
+@output_buffer.safe_concat('      <div id="menu-big">
+');       else 
+@output_buffer.safe_concat('        <div id="menu">
+');         end 
+@output_buffer.safe_concat('        <ul>
+
+          <li id="users">
+            <a href="/users/');@output_buffer.append= (session[:user_id]);@output_buffer.safe_concat('">Perfil</a>
+          </li>
+
+        </ul>
+      </div>
+');     end 
+@output_buffer.safe_concat('  </div>
+');end
+@output_buffer.safe_concat('
+'); #END OF YIELD DEFINITION 
+@output_buffer.safe_concat('<body>
+	<div id="out-contain">
+		<div id="contain">
+			<div id="header">
+				');@output_buffer.append= ( yield :header );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('			</div>
+                  <div style="margin-top:15px;clear:both;"><hr/></div>
+			<div id="main">
+                                <div id="left">
+					');@output_buffer.append= ( yield :sidebar_left );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('				</div>
+				<div id="content">
+					');@output_buffer.append= ( yield );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('				</div>
+                                <div id="sidebar">
+					');@output_buffer.append= ( yield :sidebar_right );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('				</div>
+			</div>
+
+		</div>
+		<div id="footer">
+			');@output_buffer.append= ( yield :footer );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('		</div>
+		</div>
+
+
+</body>
+</html>');@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_view/template.rb:285:in `module_eval'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_view/template.rb:285:in `compile'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_view/template.rb:233:in `compile!'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_view/template.rb:142:in `block in render'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.2.2/lib/active_support/notifications.rb:125:in `instrument'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_view/template.rb:141:in `render'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_view/renderer/template_renderer.rb:54:in `render_with_layout'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_view/renderer/template_renderer.rb:40:in `render_template'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_view/renderer/template_renderer.rb:13:in `render'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_view/renderer/renderer.rb:36:in `render_template'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_view/renderer/renderer.rb:17:in `render'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/abstract_controller/rendering.rb:109:in `_render_template'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_controller/metal/streaming.rb:225:in `_render_template'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/abstract_controller/rendering.rb:103:in `render_to_body'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/abstract_controller/rendering.rb:88:in `render'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_controller/metal/rendering.rb:16:in `render'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.2.2/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/home/alex/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/benchmark.rb:310:in `realtime'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.2.2/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/activerecord-3.2.2/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_controller/metal/mime_responds.rb:196:in `respond_to'
+/var/www/compilandoideas/trunk/app/controllers/users_controller.rb:7:in `index'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/abstract_controller/base.rb:167:in `process_action'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.2.2/lib/active_support/callbacks.rb:414:in `_run__892895446531508323__process_action__1614598821815009399__callbacks'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.2.2/lib/active_support/callbacks.rb:405:in `__run_callback'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.2.2/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.2.2/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.2.2/lib/active_support/notifications.rb:123:in `block in instrument'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.2.2/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.2.2/lib/active_support/notifications.rb:123:in `instrument'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_controller/metal/params_wrapper.rb:205:in `process_action'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/activerecord-3.2.2/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/abstract_controller/base.rb:121:in `process'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/abstract_controller/rendering.rb:45:in `process'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_controller/metal.rb:203:in `dispatch'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_controller/metal.rb:246:in `block in action'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/routing/route_set.rb:67:in `call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/routing/route_set.rb:67:in `dispatch'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/routing/route_set.rb:30:in `call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/journey-1.0.4/lib/journey/router.rb:68:in `block in call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/journey-1.0.4/lib/journey/router.rb:56:in `each'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/journey-1.0.4/lib/journey/router.rb:56:in `call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/routing/route_set.rb:594:in `call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/rack-1.4.1/lib/rack/etag.rb:23:in `call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/rack-1.4.1/lib/rack/conditionalget.rb:25:in `call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/head.rb:14:in `call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/flash.rb:242:in `call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/rack-1.4.1/lib/rack/session/abstract/id.rb:205:in `context'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/rack-1.4.1/lib/rack/session/abstract/id.rb:200:in `call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/cookies.rb:338:in `call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/activerecord-3.2.2/lib/active_record/query_cache.rb:64:in `call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/activerecord-3.2.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:443:in `call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.2.2/lib/active_support/callbacks.rb:405:in `_run__3259306539132500706__call__1325804394400366835__callbacks'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.2.2/lib/active_support/callbacks.rb:405:in `__run_callback'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.2.2/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.2.2/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/reloader.rb:65:in `call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/railties-3.2.2/lib/rails/rack/logger.rb:26:in `call_app'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/railties-3.2.2/lib/rails/rack/logger.rb:16:in `call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/rack-1.4.1/lib/rack/methodoverride.rb:21:in `call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/rack-1.4.1/lib/rack/runtime.rb:17:in `call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.2.2/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/rack-1.4.1/lib/rack/lock.rb:15:in `call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/static.rb:61:in `call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/railties-3.2.2/lib/rails/engine.rb:479:in `call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/railties-3.2.2/lib/rails/application.rb:220:in `call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/rack-1.4.1/lib/rack/content_length.rb:14:in `call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/railties-3.2.2/lib/rails/rack/log_tailer.rb:14:in `call'
+/home/alex/.rvm/gems/ruby-1.9.2-p290/gems/rack-1.4.1/lib/rack/handler/webrick.rb:59:in `service'
+/home/alex/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/home/alex/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/home/alex/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+Completed 500 Internal Server Error in 4ms
+
+ActionView::Template::Error (/var/www/compilandoideas/trunk/app/views/layouts/application.html.erb:94: syntax error, unexpected keyword_ensure, expecting $end):
+    91: 
+    92: </body>
+    93: </html>
+  app/controllers/users_controller.rb:7:in `index'
+
+
+  Rendered /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.9ms)
+  Rendered /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (13.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2012-08-11 18:14:07 +0200
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` [0m
+  Rendered users/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-08-11 18:14:07 +0200
+Served asset /application.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2012-08-11 18:14:07 +0200
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2012-08-11 18:14:07 +0200
+Served asset /comments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/compilando.css?body=1" for 127.0.0.1 at 2012-08-11 18:14:07 +0200
+Served asset /compilando.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-08-11 18:14:07 +0200
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.ui.css?body=1" for 127.0.0.1 at 2012-08-11 18:14:07 +0200
+Served asset /jquery.ui.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-08-11 18:14:07 +0200
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-08-11 18:14:07 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.css?body=1" for 127.0.0.1 at 2012-08-11 18:14:07 +0200
+Served asset /jquery.fancybox-1.3.4.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-08-11 18:14:07 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2012-08-11 18:14:07 +0200
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-08-11 18:14:07 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2012-08-11 18:14:07 +0200
+Served asset /comments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.js?body=1" for 127.0.0.1 at 2012-08-11 18:14:07 +0200
+Served asset /jquery.fancybox-1.3.4.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.form.js?body=1" for 127.0.0.1 at 2012-08-11 18:14:07 +0200
+Served asset /jquery.form.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.qtip.js?body=1" for 127.0.0.1 at 2012-08-11 18:14:07 +0200
+Served asset /jquery.qtip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.snippet.min.js?body=1" for 127.0.0.1 at 2012-08-11 18:14:07 +0200
+Served asset /jquery.snippet.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-08-11 18:14:07 +0200
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-08-11 18:14:07 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-08-11 18:14:07 +0200
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2012-08-11 19:00:51 +0200
+Served asset /rails.png - 200 OK (1ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2012-08-11 19:00:56 +0200
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` 
+  Rendered users/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 49ms (Views: 48.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-08-11 19:00:56 +0200
+Served asset /application.css - 304 Not Modified (11ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.css?body=1" for 127.0.0.1 at 2012-08-11 19:00:56 +0200
+Served asset /jquery.fancybox-1.3.4.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/compilando.css?body=1" for 127.0.0.1 at 2012-08-11 19:00:56 +0200
+Served asset /compilando.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2012-08-11 19:00:56 +0200
+Served asset /comments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-08-11 19:00:56 +0200
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2012-08-11 19:00:56 +0200
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.css?body=1" for 127.0.0.1 at 2012-08-11 19:00:56 +0200
+Served asset /jquery.ui.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-08-11 19:00:56 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-08-11 19:00:56 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-08-11 19:00:56 +0200
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-08-11 19:00:56 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2012-08-11 19:00:56 +0200
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2012-08-11 19:00:56 +0200
+Served asset /comments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.js?body=1" for 127.0.0.1 at 2012-08-11 19:00:56 +0200
+Served asset /jquery.fancybox-1.3.4.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.form.js?body=1" for 127.0.0.1 at 2012-08-11 19:00:56 +0200
+Served asset /jquery.form.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.qtip.js?body=1" for 127.0.0.1 at 2012-08-11 19:00:56 +0200
+Served asset /jquery.qtip.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.snippet.min.js?body=1" for 127.0.0.1 at 2012-08-11 19:00:56 +0200
+Served asset /jquery.snippet.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-08-11 19:00:56 +0200
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-08-11 19:00:56 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-08-11 19:00:56 +0200
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2012-08-11 19:02:40 +0200
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` [0m
+  Rendered users/index.html.erb within layouts/application (0.4ms)
+Compiled compilando.css  (2ms)  (pid 7954)
+Compiled application.css  (2ms)  (pid 7954)
+Completed 200 OK in 35ms (Views: 33.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-08-11 19:02:40 +0200
+Served asset /application.css - 304 Not Modified (61ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2012-08-11 19:02:40 +0200
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/compilando.css?body=1" for 127.0.0.1 at 2012-08-11 19:02:40 +0200
+Served asset /compilando.css - 200 OK (4ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2012-08-11 19:02:40 +0200
+Served asset /comments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.css?body=1" for 127.0.0.1 at 2012-08-11 19:02:40 +0200
+Served asset /jquery.ui.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.css?body=1" for 127.0.0.1 at 2012-08-11 19:02:40 +0200
+Served asset /jquery.fancybox-1.3.4.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-08-11 19:02:40 +0200
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-08-11 19:02:40 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-08-11 19:02:40 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-08-11 19:02:40 +0200
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-08-11 19:02:40 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2012-08-11 19:02:40 +0200
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2012-08-11 19:02:40 +0200
+Served asset /comments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.js?body=1" for 127.0.0.1 at 2012-08-11 19:02:40 +0200
+Served asset /jquery.fancybox-1.3.4.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.form.js?body=1" for 127.0.0.1 at 2012-08-11 19:02:40 +0200
+Served asset /jquery.form.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.qtip.js?body=1" for 127.0.0.1 at 2012-08-11 19:02:40 +0200
+Served asset /jquery.qtip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.snippet.min.js?body=1" for 127.0.0.1 at 2012-08-11 19:02:40 +0200
+Served asset /jquery.snippet.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-08-11 19:02:40 +0200
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-08-11 19:02:40 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-08-11 19:02:40 +0200
+Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2012-08-11 19:02:50 +0200
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` 
+  Rendered users/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 24ms (Views: 22.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-08-11 19:02:50 +0200
+Served asset /application.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2012-08-11 19:02:50 +0200
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/compilando.css?body=1" for 127.0.0.1 at 2012-08-11 19:02:50 +0200
+Served asset /compilando.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.css?body=1" for 127.0.0.1 at 2012-08-11 19:02:50 +0200
+Served asset /jquery.fancybox-1.3.4.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2012-08-11 19:02:50 +0200
+Served asset /comments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.css?body=1" for 127.0.0.1 at 2012-08-11 19:02:50 +0200
+Served asset /jquery.ui.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-08-11 19:02:50 +0200
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-08-11 19:02:50 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-08-11 19:02:50 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-08-11 19:02:51 +0200
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-08-11 19:02:51 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2012-08-11 19:02:51 +0200
+Served asset /categories.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2012-08-11 19:02:51 +0200
+Served asset /comments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.form.js?body=1" for 127.0.0.1 at 2012-08-11 19:02:51 +0200
+Served asset /jquery.form.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.js?body=1" for 127.0.0.1 at 2012-08-11 19:02:51 +0200
+Served asset /jquery.fancybox-1.3.4.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery.qtip.js?body=1" for 127.0.0.1 at 2012-08-11 19:02:51 +0200
+Served asset /jquery.qtip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-08-11 19:02:51 +0200
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.snippet.min.js?body=1" for 127.0.0.1 at 2012-08-11 19:02:51 +0200
+Served asset /jquery.snippet.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-08-11 19:02:51 +0200
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-08-11 19:02:51 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2012-08-11 19:04:31 +0200
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` [0m
+  Rendered users/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 19ms (Views: 17.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-08-11 19:04:31 +0200
+Served asset /application.css - 304 Not Modified (12ms)
+
+
+Started GET "/assets/compilando.css?body=1" for 127.0.0.1 at 2012-08-11 19:04:31 +0200
+Served asset /compilando.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.css?body=1" for 127.0.0.1 at 2012-08-11 19:04:31 +0200
+Served asset /jquery.ui.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.css?body=1" for 127.0.0.1 at 2012-08-11 19:04:31 +0200
+Served asset /jquery.fancybox-1.3.4.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2012-08-11 19:04:31 +0200
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2012-08-11 19:04:31 +0200
+Served asset /comments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-08-11 19:04:31 +0200
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-08-11 19:04:31 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-08-11 19:04:31 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-08-11 19:04:31 +0200
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-08-11 19:04:31 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2012-08-11 19:04:31 +0200
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2012-08-11 19:04:31 +0200
+Served asset /comments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.js?body=1" for 127.0.0.1 at 2012-08-11 19:04:31 +0200
+Served asset /jquery.fancybox-1.3.4.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.form.js?body=1" for 127.0.0.1 at 2012-08-11 19:04:31 +0200
+Served asset /jquery.form.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.qtip.js?body=1" for 127.0.0.1 at 2012-08-11 19:04:31 +0200
+Served asset /jquery.qtip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.snippet.min.js?body=1" for 127.0.0.1 at 2012-08-11 19:04:31 +0200
+Served asset /jquery.snippet.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-08-11 19:04:31 +0200
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-08-11 19:04:31 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-08-11 19:04:31 +0200
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/applications" for 127.0.0.1 at 2012-08-11 19:08:37 +0200
+
+ActionController::RoutingError (No route matches [GET] "/applications"):
+  actionpack (3.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.2) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.2) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.2) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/static.rb:61:in `call'
+  railties (3.2.2) lib/rails/engine.rb:479:in `call'
+  railties (3.2.2) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.2) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /home/alex/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/alex/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/alex/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/applications" for 127.0.0.1 at 2012-08-11 19:09:50 +0200
+
+ActionController::RoutingError (No route matches [GET] "/applications"):
+  actionpack (3.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.2) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.2) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.2) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/static.rb:61:in `call'
+  railties (3.2.2) lib/rails/engine.rb:479:in `call'
+  railties (3.2.2) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.2) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /home/alex/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/alex/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/alex/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2012-08-11 19:10:13 +0200
+Served asset /rails.png - 200 OK (2ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2012-08-11 19:37:51 +0200
+Served asset /rails.png - 200 OK (2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2012-08-11 19:37:58 +0200
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` [0m
+  Rendered users/index.html.erb within layouts/application (41.0ms)
+Completed 200 OK in 151ms (Views: 140.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-08-11 19:37:59 +0200
+Served asset /application.css - 304 Not Modified (48ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2012-08-11 19:37:59 +0200
+Served asset /categories.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.css?body=1" for 127.0.0.1 at 2012-08-11 19:37:59 +0200
+Served asset /jquery.fancybox-1.3.4.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2012-08-11 19:37:59 +0200
+Served asset /comments.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/compilando.css?body=1" for 127.0.0.1 at 2012-08-11 19:37:59 +0200
+Served asset /compilando.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.ui.css?body=1" for 127.0.0.1 at 2012-08-11 19:37:59 +0200
+Served asset /jquery.ui.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-08-11 19:37:59 +0200
+Served asset /posts.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-08-11 19:37:59 +0200
+Served asset /scaffolds.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-08-11 19:37:59 +0200
+Served asset /users.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-08-11 19:37:59 +0200
+Served asset /jquery.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-08-11 19:37:59 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2012-08-11 19:37:59 +0200
+Served asset /categories.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2012-08-11 19:37:59 +0200
+Served asset /comments.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.js?body=1" for 127.0.0.1 at 2012-08-11 19:37:59 +0200
+Served asset /jquery.fancybox-1.3.4.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery.form.js?body=1" for 127.0.0.1 at 2012-08-11 19:37:59 +0200
+Served asset /jquery.form.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.qtip.js?body=1" for 127.0.0.1 at 2012-08-11 19:37:59 +0200
+Served asset /jquery.qtip.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.snippet.min.js?body=1" for 127.0.0.1 at 2012-08-11 19:37:59 +0200
+Served asset /jquery.snippet.min.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-08-11 19:37:59 +0200
+Served asset /posts.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-08-11 19:37:59 +0200
+Served asset /users.js - 304 Not Modified (37ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-08-11 19:37:59 +0200
+Served asset /application.js - 304 Not Modified (16ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2012-08-11 19:51:08 +0200
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` 
+  Rendered users/index.html.erb within layouts/application (0.3ms)
+Compiled compilando.css  (3ms)  (pid 27336)
+Compiled application.css  (2ms)  (pid 27336)
+Completed 200 OK in 35ms (Views: 33.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-08-11 19:51:08 +0200
+Served asset /application.css - 304 Not Modified (28ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2012-08-11 19:51:08 +0200
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2012-08-11 19:51:08 +0200
+Served asset /comments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/compilando.css?body=1" for 127.0.0.1 at 2012-08-11 19:51:08 +0200
+Served asset /compilando.css - 200 OK (3ms)
+
+
+Started GET "/assets/jquery.ui.css?body=1" for 127.0.0.1 at 2012-08-11 19:51:08 +0200
+Served asset /jquery.ui.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.css?body=1" for 127.0.0.1 at 2012-08-11 19:51:08 +0200
+Served asset /jquery.fancybox-1.3.4.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-08-11 19:51:08 +0200
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-08-11 19:51:08 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-08-11 19:51:08 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-08-11 19:51:08 +0200
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-08-11 19:51:08 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2012-08-11 19:51:08 +0200
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2012-08-11 19:51:08 +0200
+Served asset /comments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.js?body=1" for 127.0.0.1 at 2012-08-11 19:51:08 +0200
+Served asset /jquery.fancybox-1.3.4.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.form.js?body=1" for 127.0.0.1 at 2012-08-11 19:51:08 +0200
+Served asset /jquery.form.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.qtip.js?body=1" for 127.0.0.1 at 2012-08-11 19:51:08 +0200
+Served asset /jquery.qtip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.snippet.min.js?body=1" for 127.0.0.1 at 2012-08-11 19:51:08 +0200
+Served asset /jquery.snippet.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-08-11 19:51:08 +0200
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-08-11 19:51:08 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-08-11 19:51:08 +0200
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2012-08-11 19:52:23 +0200
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` [0m
+  Rendered users/index.html.erb within layouts/application (0.4ms)
+Compiled compilando.css  (2ms)  (pid 27336)
+Compiled application.css  (5ms)  (pid 27336)
+Completed 200 OK in 45ms (Views: 43.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-08-11 19:52:23 +0200
+Served asset /application.css - 304 Not Modified (23ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2012-08-11 19:52:23 +0200
+Served asset /comments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2012-08-11 19:52:23 +0200
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.css?body=1" for 127.0.0.1 at 2012-08-11 19:52:23 +0200
+Served asset /jquery.fancybox-1.3.4.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.css?body=1" for 127.0.0.1 at 2012-08-11 19:52:23 +0200
+Served asset /jquery.ui.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/compilando.css?body=1" for 127.0.0.1 at 2012-08-11 19:52:23 +0200
+Served asset /compilando.css - 200 OK (6ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-08-11 19:52:23 +0200
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-08-11 19:52:23 +0200
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-08-11 19:52:23 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-08-11 19:52:23 +0200
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-08-11 19:52:23 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2012-08-11 19:52:23 +0200
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2012-08-11 19:52:23 +0200
+Served asset /comments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.js?body=1" for 127.0.0.1 at 2012-08-11 19:52:23 +0200
+Served asset /jquery.fancybox-1.3.4.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.qtip.js?body=1" for 127.0.0.1 at 2012-08-11 19:52:23 +0200
+Served asset /jquery.qtip.js - 304 Not Modified (47ms)
+
+
+Started GET "/assets/jquery.form.js?body=1" for 127.0.0.1 at 2012-08-11 19:52:23 +0200
+Served asset /jquery.form.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.snippet.min.js?body=1" for 127.0.0.1 at 2012-08-11 19:52:23 +0200
+Served asset /jquery.snippet.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-08-11 19:52:23 +0200
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-08-11 19:52:23 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-08-11 19:52:23 +0200
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2012-08-11 19:52:34 +0200
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` 
+  Rendered users/index.html.erb within layouts/application (0.5ms)
+Compiled compilando.css  (2ms)  (pid 27336)
+Compiled application.css  (2ms)  (pid 27336)
+Completed 200 OK in 47ms (Views: 46.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2012-08-11 19:52:34 +0200
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2012-08-11 19:52:34 +0200
+Served asset /comments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-08-11 19:52:34 +0200
+Served asset /application.css - 304 Not Modified (16ms)
+
+
+Started GET "/assets/compilando.css?body=1" for 127.0.0.1 at 2012-08-11 19:52:34 +0200
+Served asset /compilando.css - 200 OK (3ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.css?body=1" for 127.0.0.1 at 2012-08-11 19:52:34 +0200
+Served asset /jquery.fancybox-1.3.4.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.css?body=1" for 127.0.0.1 at 2012-08-11 19:52:34 +0200
+Served asset /jquery.ui.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2012-08-11 19:52:34 +0200
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-08-11 19:52:34 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-08-11 19:52:34 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-08-11 19:52:34 +0200
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-08-11 19:52:34 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-08-11 19:52:34 +0200
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2012-08-11 19:52:34 +0200
+Served asset /comments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.js?body=1" for 127.0.0.1 at 2012-08-11 19:52:34 +0200
+Served asset /jquery.fancybox-1.3.4.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.form.js?body=1" for 127.0.0.1 at 2012-08-11 19:52:34 +0200
+Served asset /jquery.form.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.qtip.js?body=1" for 127.0.0.1 at 2012-08-11 19:52:34 +0200
+Served asset /jquery.qtip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.snippet.min.js?body=1" for 127.0.0.1 at 2012-08-11 19:52:34 +0200
+Served asset /jquery.snippet.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-08-11 19:52:34 +0200
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-08-11 19:52:34 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-08-11 19:52:34 +0200
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2012-08-11 20:04:01 +0200
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` [0m
+  Rendered users/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-08-11 20:04:01 +0200
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2012-08-11 20:04:01 +0200
+Served asset /categories.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2012-08-11 20:04:01 +0200
+Served asset /comments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.css?body=1" for 127.0.0.1 at 2012-08-11 20:04:01 +0200
+Served asset /jquery.fancybox-1.3.4.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/compilando.css?body=1" for 127.0.0.1 at 2012-08-11 20:04:01 +0200
+Served asset /compilando.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-08-11 20:04:01 +0200
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.css?body=1" for 127.0.0.1 at 2012-08-11 20:04:01 +0200
+Served asset /jquery.ui.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-08-11 20:04:01 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-08-11 20:04:01 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-08-11 20:04:01 +0200
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-08-11 20:04:01 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2012-08-11 20:04:01 +0200
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2012-08-11 20:04:01 +0200
+Served asset /comments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.js?body=1" for 127.0.0.1 at 2012-08-11 20:04:01 +0200
+Served asset /jquery.fancybox-1.3.4.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.form.js?body=1" for 127.0.0.1 at 2012-08-11 20:04:01 +0200
+Served asset /jquery.form.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.qtip.js?body=1" for 127.0.0.1 at 2012-08-11 20:04:01 +0200
+Served asset /jquery.qtip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.snippet.min.js?body=1" for 127.0.0.1 at 2012-08-11 20:04:01 +0200
+Served asset /jquery.snippet.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-08-11 20:04:01 +0200
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-08-11 20:04:01 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-08-11 20:04:01 +0200
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2012-08-11 20:04:45 +0200
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` 
+  Rendered users/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 15ms (Views: 13.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-08-11 20:04:45 +0200
+Served asset /application.css - 304 Not Modified (49ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2012-08-11 20:04:45 +0200
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2012-08-11 20:04:45 +0200
+Served asset /comments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.css?body=1" for 127.0.0.1 at 2012-08-11 20:04:45 +0200
+Served asset /jquery.fancybox-1.3.4.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/compilando.css?body=1" for 127.0.0.1 at 2012-08-11 20:04:45 +0200
+Served asset /compilando.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.css?body=1" for 127.0.0.1 at 2012-08-11 20:04:45 +0200
+Served asset /jquery.ui.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-08-11 20:04:45 +0200
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-08-11 20:04:45 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-08-11 20:04:45 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-08-11 20:04:45 +0200
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-08-11 20:04:45 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2012-08-11 20:04:45 +0200
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2012-08-11 20:04:45 +0200
+Served asset /comments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.js?body=1" for 127.0.0.1 at 2012-08-11 20:04:45 +0200
+Served asset /jquery.fancybox-1.3.4.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.form.js?body=1" for 127.0.0.1 at 2012-08-11 20:04:45 +0200
+Served asset /jquery.form.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.qtip.js?body=1" for 127.0.0.1 at 2012-08-11 20:04:45 +0200
+Served asset /jquery.qtip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.snippet.min.js?body=1" for 127.0.0.1 at 2012-08-11 20:04:45 +0200
+Served asset /jquery.snippet.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-08-11 20:04:45 +0200
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-08-11 20:04:45 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-08-11 20:04:45 +0200
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2012-08-11 20:06:04 +0200
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` [0m
+  Rendered users/index.html.erb within layouts/application (0.3ms)
+Compiled compilando.css  (2ms)  (pid 27336)
+Compiled application.css  (2ms)  (pid 27336)
+Completed 200 OK in 41ms (Views: 40.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-08-11 20:06:05 +0200
+Served asset /application.css - 304 Not Modified (22ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2012-08-11 20:06:05 +0200
+Served asset /comments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/compilando.css?body=1" for 127.0.0.1 at 2012-08-11 20:06:05 +0200
+Served asset /compilando.css - 200 OK (3ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2012-08-11 20:06:05 +0200
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.css?body=1" for 127.0.0.1 at 2012-08-11 20:06:05 +0200
+Served asset /jquery.ui.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.css?body=1" for 127.0.0.1 at 2012-08-11 20:06:05 +0200
+Served asset /jquery.fancybox-1.3.4.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-08-11 20:06:05 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-08-11 20:06:05 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-08-11 20:06:05 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-08-11 20:06:05 +0200
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-08-11 20:06:05 +0200
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2012-08-11 20:06:05 +0200
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-08-11 20:06:05 +0200
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.js?body=1" for 127.0.0.1 at 2012-08-11 20:06:05 +0200
+Served asset /jquery.fancybox-1.3.4.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.form.js?body=1" for 127.0.0.1 at 2012-08-11 20:06:05 +0200
+Served asset /jquery.form.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.qtip.js?body=1" for 127.0.0.1 at 2012-08-11 20:06:05 +0200
+Served asset /jquery.qtip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2012-08-11 20:06:05 +0200
+Served asset /comments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.snippet.min.js?body=1" for 127.0.0.1 at 2012-08-11 20:06:05 +0200
+Served asset /jquery.snippet.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-08-11 20:06:05 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-08-11 20:06:05 +0200
+Served asset /application.js - 304 Not Modified (3ms)
