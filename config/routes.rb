@@ -1,5 +1,7 @@
 Compilandoideas::Application.routes.draw do
   
+  root :to => 'posts#last'
+
   resources :categories
 
   resources :comments
@@ -17,7 +19,7 @@ Compilandoideas::Application.routes.draw do
 
   match ':controller(/:action)(/:id)', :constraints => { :id => /\d/}
 
-  root :to => 'application#index'
+
 
 
 end

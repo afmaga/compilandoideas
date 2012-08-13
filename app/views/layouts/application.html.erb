@@ -21,7 +21,7 @@
         
 <% content_for :footer do %>
 
-        <div>	<%=  "CompilandoIdeas.es " %><%= "designed by Afmaga @ 2012" %><%="- All Rights Reserved" %></div>
+        <div>	<%=  "CompilandoIdeas.es " %><%= "powered by RubyOnRails, designed by Afmaga @ 2012" %><%="- All Rights Reserved" %></div>
 <% end %>
 
 <% content_for :sidebar_left  do %>
@@ -32,22 +32,28 @@
        <li id="users">
           <a href="/users">Usuarios</a>
        </li>
+       <li id="users">
+        <a href="/users/<%=session[:user_id]%>">Perfil</a>
+      </li>
+      <li id="categories">
+          <a href="/posts">Posts</a>
+       </li>
        <li id="categories">
-          <a href="/users">Categorias</a>
+          <a href="/categories">Categorias</a>
        </li>
     <% else %>
       <div id="menu">
          <ul>
     <% end %>
      <li id="users">
-      <a href="/home">Indice</a>
+      <a href="/">Indice</a>
     </li>
      <li id="users">
       <a href="/users/<%=session[:user_id]%>">Perfil</a>
     </li>
-    <li id="users">
-      <a href="/users/<%=session[:user_id]%>">Perfil</a>
-    </li>
+       <li id="categories">
+          <a href="/categories">Categorias</a>
+       </li>
 
     </ul>
     </div>

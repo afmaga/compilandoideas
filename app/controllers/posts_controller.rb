@@ -80,4 +80,14 @@ class PostsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def last
+    posts = Post.order('created_at DESC').all
+    @post = posts.first
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json { render json: @post }
+    end
+  end
+
 end

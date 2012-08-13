@@ -3554,3 +3554,1305 @@ Served asset /users.js - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-08-11 20:06:05 +0200
 Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2012-08-13 18:39:08 +0200
+Served asset /rails.png - 304 Not Modified (19ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2012-08-13 18:54:41 +0200
+Served asset /rails.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2012-08-13 18:54:43 +0200
+Served asset /rails.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2012-08-13 19:00:13 +0200
+Served asset /rails.png - 200 OK (2ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2012-08-13 19:08:09 +0200
+Served asset /rails.png - 304 Not Modified (2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-08-13 19:11:22 +0200
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (73.2ms)
+Completed 500 Internal Server Error in 300ms
+
+ActionView::Template::Error (Missing template users/registry with {:locale=>[:es, :en], :formats=>[:html], :handlers=>[:erb, :builder, :coffee]}. Searched in:
+  * "/var/www/compilandoideas/trunk/app/views"
+):
+    2: 	<h1><%= raw _("Welcome to the <br/><br/><strong>iMprove iPhone App Management System</strong>") %></h1>
+    3: <% else %>
+    4: 	<h1 class="squeeze-title center"><%= raw _("Welcome to <strong>iMprove</strong>") %></h1>
+    5: 	<%= render :template => 'users/registry' %>
+    6: <% end %>
+  app/views/application/index.html.erb:5:in `_app_views_application_index_html_erb___763584479696738481_43961560'
+  app/controllers/application_controller.rb:25:in `index'
+
+
+  Rendered /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.8ms)
+  Rendered /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (14.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-08-13 19:13:50 +0200
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (37.4ms)
+Completed 500 Internal Server Error in 232ms
+
+ActionView::Template::Error (Missing template users/registry with {:locale=>[:es, :en], :formats=>[:html], :handlers=>[:erb, :builder, :coffee]}. Searched in:
+  * "/var/www/compilandoideas/trunk/app/views"
+):
+    2: 	<h1><%= raw _("Welcome to the <br/><br/><strong>iMprove iPhone App Management System</strong>") %></h1>
+    3: <% else %>
+    4: 	<h1 class="squeeze-title center"><%= raw _("Welcome to <strong>iMprove</strong>") %></h1>
+    5: 	<%= render :template => 'users/registry' %>
+    6: <% end %>
+  app/views/application/index.html.erb:5:in `_app_views_application_index_html_erb___1401709145936493963_24788580'
+  app/controllers/application_controller.rb:25:in `index'
+
+
+  Rendered /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.6ms)
+  Rendered /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-08-13 19:17:56 +0200
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 110ms (Views: 109.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-08-13 19:17:56 +0200
+Served asset /application.css - 200 OK (55ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2012-08-13 19:17:57 +0200
+Served asset /comments.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2012-08-13 19:17:57 +0200
+Served asset /categories.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.css?body=1" for 127.0.0.1 at 2012-08-13 19:17:57 +0200
+Served asset /jquery.fancybox-1.3.4.css - 200 OK (2ms)
+
+
+Started GET "/assets/compilando.css?body=1" for 127.0.0.1 at 2012-08-13 19:17:57 +0200
+Served asset /compilando.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.ui.css?body=1" for 127.0.0.1 at 2012-08-13 19:17:57 +0200
+Served asset /jquery.ui.css - 200 OK (2ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-08-13 19:17:57 +0200
+Served asset /posts.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-08-13 19:17:57 +0200
+Served asset /scaffolds.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-08-13 19:17:57 +0200
+Served asset /users.css - 304 Not Modified (11ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-08-13 19:17:57 +0200
+Served asset /jquery.js - 200 OK (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-08-13 19:17:57 +0200
+Served asset /jquery_ujs.js - 200 OK (3ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2012-08-13 19:17:57 +0200
+Served asset /categories.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2012-08-13 19:17:57 +0200
+Served asset /comments.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.js?body=1" for 127.0.0.1 at 2012-08-13 19:17:57 +0200
+Served asset /jquery.fancybox-1.3.4.js - 200 OK (1ms)
+
+
+Started GET "/assets/jquery.form.js?body=1" for 127.0.0.1 at 2012-08-13 19:17:57 +0200
+Served asset /jquery.form.js - 200 OK (1ms)
+
+
+Started GET "/assets/jquery.qtip.js?body=1" for 127.0.0.1 at 2012-08-13 19:17:57 +0200
+Served asset /jquery.qtip.js - 200 OK (5ms)
+
+
+Started GET "/assets/jquery.snippet.min.js?body=1" for 127.0.0.1 at 2012-08-13 19:17:57 +0200
+Served asset /jquery.snippet.min.js - 200 OK (2ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-08-13 19:17:57 +0200
+Served asset /posts.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-08-13 19:17:57 +0200
+Served asset /users.js - 200 OK (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-08-13 19:17:57 +0200
+Served asset /application.js - 200 OK (46ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-08-13 19:21:41 +0200
+Processing by PostsController#last as HTML
+  Rendered posts/last.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 4ms
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    2: 
+    3: <p>
+    4:   <b>Title:</b>
+    5:   <%= @post.title %>
+    6: </p>
+    7: 
+    8: <p>
+  app/views/posts/last.html.erb:5:in `_app_views_posts_last_html_erb___4179489577815842529_23712660'
+
+
+  Rendered /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.5ms)
+  Rendered /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-08-13 19:22:01 +0200
+Processing by PostsController#last as HTML
+  Rendered posts/last.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 3ms
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    2: 
+    3: <p>
+    4:   <b>Title:</b>
+    5:   <%= @post.title %>
+    6: </p>
+    7: 
+    8: <p>
+  app/views/posts/last.html.erb:5:in `_app_views_posts_last_html_erb___4179489577815842529_23712660'
+
+
+  Rendered /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.7ms)
+  Rendered /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (7.0ms)
+  Rendered /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (53.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-08-13 19:22:09 +0200
+Processing by PostsController#last as HTML
+  Rendered posts/last.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 4ms
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    2: 
+    3: <p>
+    4:   <b>Title:</b>
+    5:   <%= @post.title %>
+    6: </p>
+    7: 
+    8: <p>
+  app/views/posts/last.html.erb:5:in `_app_views_posts_last_html_erb___4179489577815842529_23712660'
+
+
+  Rendered /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.6ms)
+  Rendered /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-08-13 19:26:27 +0200
+Processing by PostsController#last as HTML
+  Rendered posts/last.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 4ms
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    2: 
+    3: <p>
+    4:   <b>Title:</b>
+    5:   <%= @post.title %>
+    6: </p>
+    7: 
+    8: <p>
+  app/views/posts/last.html.erb:5:in `_app_views_posts_last_html_erb___4179489577815842529_23712660'
+
+
+  Rendered /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.2ms)
+  Rendered /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (13.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-08-13 19:26:41 +0200
+Processing by PostsController#last as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT `posts`.* FROM `posts` ORDER BY `posts`.`id` DESC LIMIT 1[0m
+  Rendered posts/last.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 45ms
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    2: 
+    3: <p>
+    4:   <b>Title:</b>
+    5:   <%= @post.title %>
+    6: </p>
+    7: 
+    8: <p>
+  app/views/posts/last.html.erb:5:in `_app_views_posts_last_html_erb___4179489577815842529_23712660'
+  app/controllers/posts_controller.rb:87:in `last'
+
+
+  Rendered /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.6ms)
+  Rendered /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-08-13 19:28:24 +0200
+Processing by PostsController#last as HTML
+  [1m[35mPost Load (0.1ms)[0m  SELECT `posts`.* FROM `posts` ORDER BY `posts`.`id` DESC LIMIT 1
+  Rendered posts/last.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 4ms
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    2: 
+    3: <p>
+    4:   <b>Title:</b>
+    5:   <%= @post.title %>
+    6: </p>
+    7: 
+    8: <p>
+  app/views/posts/last.html.erb:5:in `_app_views_posts_last_html_erb___4179489577815842529_23712660'
+  app/controllers/posts_controller.rb:87:in `last'
+
+
+  Rendered /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.5ms)
+  Rendered /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (33.8ms)
+  Rendered /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (45.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-08-13 19:28:25 +0200
+Processing by PostsController#last as HTML
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT `posts`.* FROM `posts` ORDER BY `posts`.`id` DESC LIMIT 1[0m
+  Rendered posts/last.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 4ms
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    2: 
+    3: <p>
+    4:   <b>Title:</b>
+    5:   <%= @post.title %>
+    6: </p>
+    7: 
+    8: <p>
+  app/views/posts/last.html.erb:5:in `_app_views_posts_last_html_erb___4179489577815842529_23712660'
+  app/controllers/posts_controller.rb:87:in `last'
+
+
+  Rendered /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.5ms)
+  Rendered /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (13.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-08-13 19:34:32 +0200
+Processing by PostsController#last as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT `posts`.* FROM `posts` ORDER BY created_at DESC LIMIT 1[0m
+  Rendered posts/last.html.erb within layouts/application (40.8ms)
+Completed 500 Internal Server Error in 120ms
+
+ActionView::Template::Error (undefined method `title' for []:Array):
+    2: 
+    3: <p>
+    4:   <b>Title:</b>
+    5:   <%= @post.title %>
+    6: </p>
+    7: 
+    8: <p>
+  app/views/posts/last.html.erb:5:in `_app_views_posts_last_html_erb__560730138658159457_33173720'
+  app/controllers/posts_controller.rb:87:in `last'
+
+
+  Rendered /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (29.1ms)
+  Rendered /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (39.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-08-13 19:35:19 +0200
+Processing by PostsController#last as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT `posts`.* FROM `posts` ORDER BY created_at DESC
+  Rendered posts/last.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 5ms
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    2: 
+    3: <p>
+    4:   <b>Title:</b>
+    5:   <%= @post.title %>
+    6: </p>
+    7: 
+    8: <p>
+  app/views/posts/last.html.erb:5:in `_app_views_posts_last_html_erb__560730138658159457_33173720'
+  app/controllers/posts_controller.rb:87:in `last'
+
+
+  Rendered /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.4ms)
+  Rendered /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-08-13 19:35:21 +0200
+Processing by PostsController#last as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT `posts`.* FROM `posts` ORDER BY created_at DESC[0m
+  Rendered posts/last.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 3ms
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    2: 
+    3: <p>
+    4:   <b>Title:</b>
+    5:   <%= @post.title %>
+    6: </p>
+    7: 
+    8: <p>
+  app/views/posts/last.html.erb:5:in `_app_views_posts_last_html_erb__560730138658159457_33173720'
+  app/controllers/posts_controller.rb:87:in `last'
+
+
+  Rendered /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.6ms)
+  Rendered /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (15.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-08-13 19:35:22 +0200
+Processing by PostsController#last as HTML
+  [1m[35mPost Load (0.1ms)[0m  SELECT `posts`.* FROM `posts` ORDER BY created_at DESC
+  Rendered posts/last.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 3ms
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    2: 
+    3: <p>
+    4:   <b>Title:</b>
+    5:   <%= @post.title %>
+    6: </p>
+    7: 
+    8: <p>
+  app/views/posts/last.html.erb:5:in `_app_views_posts_last_html_erb__560730138658159457_33173720'
+  app/controllers/posts_controller.rb:87:in `last'
+
+
+  Rendered /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.6ms)
+  Rendered /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.6ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2012-08-13 19:35:36 +0200
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT `posts`.* FROM `posts` [0m
+  Rendered posts/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 83ms (Views: 81.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2012-08-13 19:35:36 +0200
+Served asset /categories.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/compilando.css?body=1" for 127.0.0.1 at 2012-08-13 19:35:36 +0200
+Served asset /compilando.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2012-08-13 19:35:36 +0200
+Served asset /comments.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.ui.css?body=1" for 127.0.0.1 at 2012-08-13 19:35:36 +0200
+Served asset /jquery.ui.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-08-13 19:35:36 +0200
+Served asset /application.css - 304 Not Modified (16ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.css?body=1" for 127.0.0.1 at 2012-08-13 19:35:36 +0200
+Served asset /jquery.fancybox-1.3.4.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-08-13 19:35:36 +0200
+Served asset /posts.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-08-13 19:35:36 +0200
+Served asset /scaffolds.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-08-13 19:35:36 +0200
+Served asset /users.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-08-13 19:35:36 +0200
+Served asset /jquery.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-08-13 19:35:36 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2012-08-13 19:35:36 +0200
+Served asset /categories.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2012-08-13 19:35:36 +0200
+Served asset /comments.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.js?body=1" for 127.0.0.1 at 2012-08-13 19:35:36 +0200
+Served asset /jquery.fancybox-1.3.4.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.form.js?body=1" for 127.0.0.1 at 2012-08-13 19:35:36 +0200
+Served asset /jquery.form.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery.qtip.js?body=1" for 127.0.0.1 at 2012-08-13 19:35:36 +0200
+Served asset /jquery.qtip.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery.snippet.min.js?body=1" for 127.0.0.1 at 2012-08-13 19:35:36 +0200
+Served asset /jquery.snippet.min.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-08-13 19:35:36 +0200
+Served asset /posts.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-08-13 19:35:36 +0200
+Served asset /users.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-08-13 19:35:36 +0200
+Served asset /application.js - 304 Not Modified (12ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2012-08-13 19:50:44 +0200
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.1ms)[0m  SELECT `posts`.* FROM `posts` 
+  Rendered posts/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 51ms (Views: 50.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-08-13 19:50:44 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2012-08-13 19:50:44 +0200
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2012-08-13 19:50:44 +0200
+Served asset /comments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/compilando.css?body=1" for 127.0.0.1 at 2012-08-13 19:50:44 +0200
+Served asset /compilando.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-08-13 19:50:44 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-08-13 19:50:44 +0200
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.css?body=1" for 127.0.0.1 at 2012-08-13 19:50:44 +0200
+Served asset /jquery.fancybox-1.3.4.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.css?body=1" for 127.0.0.1 at 2012-08-13 19:50:45 +0200
+Served asset /jquery.ui.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-08-13 19:50:45 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-08-13 19:50:45 +0200
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-08-13 19:50:45 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2012-08-13 19:50:45 +0200
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2012-08-13 19:50:45 +0200
+Served asset /comments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.js?body=1" for 127.0.0.1 at 2012-08-13 19:50:45 +0200
+Served asset /jquery.fancybox-1.3.4.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.form.js?body=1" for 127.0.0.1 at 2012-08-13 19:50:45 +0200
+Served asset /jquery.form.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.qtip.js?body=1" for 127.0.0.1 at 2012-08-13 19:50:45 +0200
+Served asset /jquery.qtip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.snippet.min.js?body=1" for 127.0.0.1 at 2012-08-13 19:50:45 +0200
+Served asset /jquery.snippet.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-08-13 19:50:45 +0200
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-08-13 19:50:45 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-08-13 19:50:45 +0200
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2012-08-13 19:51:08 +0200
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT `posts`.* FROM `posts` [0m
+  Rendered posts/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 15ms (Views: 13.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-08-13 19:51:08 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2012-08-13 19:51:08 +0200
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/compilando.css?body=1" for 127.0.0.1 at 2012-08-13 19:51:08 +0200
+Served asset /compilando.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.css?body=1" for 127.0.0.1 at 2012-08-13 19:51:08 +0200
+Served asset /jquery.fancybox-1.3.4.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2012-08-13 19:51:08 +0200
+Served asset /comments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.css?body=1" for 127.0.0.1 at 2012-08-13 19:51:08 +0200
+Served asset /jquery.ui.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-08-13 19:51:08 +0200
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-08-13 19:51:08 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-08-13 19:51:08 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-08-13 19:51:08 +0200
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-08-13 19:51:08 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2012-08-13 19:51:08 +0200
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-08-13 19:51:08 +0200
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.js?body=1" for 127.0.0.1 at 2012-08-13 19:51:08 +0200
+Served asset /jquery.fancybox-1.3.4.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.form.js?body=1" for 127.0.0.1 at 2012-08-13 19:51:08 +0200
+Served asset /jquery.form.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.qtip.js?body=1" for 127.0.0.1 at 2012-08-13 19:51:08 +0200
+Served asset /jquery.qtip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.snippet.min.js?body=1" for 127.0.0.1 at 2012-08-13 19:51:08 +0200
+Served asset /jquery.snippet.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2012-08-13 19:51:08 +0200
+Served asset /comments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-08-13 19:51:08 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-08-13 19:51:08 +0200
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2012-08-13 19:55:19 +0200
+Processing by PostsController#new as HTML
+  Rendered posts/_form.html.erb (40.4ms)
+  Rendered posts/new.html.erb within layouts/application (106.8ms)
+Completed 200 OK in 129ms (Views: 120.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-08-13 19:55:19 +0200
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2012-08-13 19:55:19 +0200
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-08-13 19:55:19 +0200
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.css?body=1" for 127.0.0.1 at 2012-08-13 19:55:19 +0200
+Served asset /jquery.fancybox-1.3.4.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2012-08-13 19:55:19 +0200
+Served asset /comments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/compilando.css?body=1" for 127.0.0.1 at 2012-08-13 19:55:19 +0200
+Served asset /compilando.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.css?body=1" for 127.0.0.1 at 2012-08-13 19:55:19 +0200
+Served asset /jquery.ui.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-08-13 19:55:19 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-08-13 19:55:19 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-08-13 19:55:19 +0200
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-08-13 19:55:19 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2012-08-13 19:55:19 +0200
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2012-08-13 19:55:19 +0200
+Served asset /comments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.js?body=1" for 127.0.0.1 at 2012-08-13 19:55:19 +0200
+Served asset /jquery.fancybox-1.3.4.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.form.js?body=1" for 127.0.0.1 at 2012-08-13 19:55:19 +0200
+Served asset /jquery.form.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.qtip.js?body=1" for 127.0.0.1 at 2012-08-13 19:55:19 +0200
+Served asset /jquery.qtip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.snippet.min.js?body=1" for 127.0.0.1 at 2012-08-13 19:55:19 +0200
+Served asset /jquery.snippet.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-08-13 19:55:19 +0200
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-08-13 19:55:19 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-08-13 19:55:19 +0200
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2012-08-13 19:55:22 +0200
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xmcyuhXqCk+4Si9pKP3T9QOX5nra6Fl/6lBPq+0zWpw=", "post"=>{"title"=>"", "content"=>"", "status"=>"", "author_id"=>"", "category_id"=>""}, "commit"=>"Create Post"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `posts` (`author_id`, `category_id`, `content`, `created_at`, `status`, `title`, `updated_at`) VALUES (NULL, NULL, '', '2012-08-13 17:55:22', '', '', '2012-08-13 17:55:22')[0m
+  [1m[35m (64.7ms)[0m  COMMIT
+Redirected to http://localhost:3000/posts/1
+Completed 302 Found in 154ms (ActiveRecord: 65.2ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2012-08-13 19:55:22 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 1 LIMIT 1[0m
+  Rendered posts/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 15ms (Views: 12.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-08-13 19:55:22 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2012-08-13 19:55:22 +0200
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2012-08-13 19:55:22 +0200
+Served asset /comments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.css?body=1" for 127.0.0.1 at 2012-08-13 19:55:22 +0200
+Served asset /jquery.fancybox-1.3.4.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/compilando.css?body=1" for 127.0.0.1 at 2012-08-13 19:55:22 +0200
+Served asset /compilando.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.css?body=1" for 127.0.0.1 at 2012-08-13 19:55:22 +0200
+Served asset /jquery.ui.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-08-13 19:55:22 +0200
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-08-13 19:55:22 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-08-13 19:55:22 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-08-13 19:55:22 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-08-13 19:55:22 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2012-08-13 19:55:22 +0200
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2012-08-13 19:55:22 +0200
+Served asset /comments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.js?body=1" for 127.0.0.1 at 2012-08-13 19:55:22 +0200
+Served asset /jquery.fancybox-1.3.4.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.form.js?body=1" for 127.0.0.1 at 2012-08-13 19:55:22 +0200
+Served asset /jquery.form.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.qtip.js?body=1" for 127.0.0.1 at 2012-08-13 19:55:22 +0200
+Served asset /jquery.qtip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.snippet.min.js?body=1" for 127.0.0.1 at 2012-08-13 19:55:22 +0200
+Served asset /jquery.snippet.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-08-13 19:55:22 +0200
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-08-13 19:55:22 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-08-13 19:55:22 +0200
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2012-08-13 19:55:25 +0200
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT `posts`.* FROM `posts` 
+  Rendered posts/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 12ms (Views: 10.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2012-08-13 19:55:25 +0200
+Served asset /comments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-08-13 19:55:25 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.css?body=1" for 127.0.0.1 at 2012-08-13 19:55:25 +0200
+Served asset /jquery.ui.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/compilando.css?body=1" for 127.0.0.1 at 2012-08-13 19:55:25 +0200
+Served asset /compilando.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.css?body=1" for 127.0.0.1 at 2012-08-13 19:55:25 +0200
+Served asset /jquery.fancybox-1.3.4.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2012-08-13 19:55:25 +0200
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-08-13 19:55:25 +0200
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-08-13 19:55:25 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-08-13 19:55:25 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-08-13 19:55:25 +0200
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-08-13 19:55:25 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2012-08-13 19:55:25 +0200
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2012-08-13 19:55:25 +0200
+Served asset /comments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.js?body=1" for 127.0.0.1 at 2012-08-13 19:55:25 +0200
+Served asset /jquery.fancybox-1.3.4.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.form.js?body=1" for 127.0.0.1 at 2012-08-13 19:55:25 +0200
+Served asset /jquery.form.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.snippet.min.js?body=1" for 127.0.0.1 at 2012-08-13 19:55:25 +0200
+Served asset /jquery.snippet.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.qtip.js?body=1" for 127.0.0.1 at 2012-08-13 19:55:25 +0200
+Served asset /jquery.qtip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-08-13 19:55:25 +0200
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-08-13 19:55:25 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-08-13 19:55:25 +0200
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2012-08-13 19:55:26 +0200
+
+ActionController::RoutingError (No route matches [GET] "/home"):
+  actionpack (3.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.2) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.2) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.2) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/static.rb:61:in `call'
+  railties (3.2.2) lib/rails/engine.rb:479:in `call'
+  railties (3.2.2) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.2) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /home/alex/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/alex/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/alex/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /home/alex/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-08-13 19:55:30 +0200
+Processing by PostsController#last as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT `posts`.* FROM `posts` ORDER BY created_at DESC[0m
+  Rendered posts/last.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2012-08-13 19:55:30 +0200
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2012-08-13 19:55:30 +0200
+Served asset /comments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-08-13 19:55:30 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/compilando.css?body=1" for 127.0.0.1 at 2012-08-13 19:55:30 +0200
+Served asset /compilando.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.css?body=1" for 127.0.0.1 at 2012-08-13 19:55:30 +0200
+Served asset /jquery.fancybox-1.3.4.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.css?body=1" for 127.0.0.1 at 2012-08-13 19:55:30 +0200
+Served asset /jquery.ui.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-08-13 19:55:30 +0200
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-08-13 19:55:30 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-08-13 19:55:30 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-08-13 19:55:30 +0200
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-08-13 19:55:30 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2012-08-13 19:55:30 +0200
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2012-08-13 19:55:30 +0200
+Served asset /comments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.js?body=1" for 127.0.0.1 at 2012-08-13 19:55:30 +0200
+Served asset /jquery.fancybox-1.3.4.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.form.js?body=1" for 127.0.0.1 at 2012-08-13 19:55:30 +0200
+Served asset /jquery.form.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.qtip.js?body=1" for 127.0.0.1 at 2012-08-13 19:55:30 +0200
+Served asset /jquery.qtip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.snippet.min.js?body=1" for 127.0.0.1 at 2012-08-13 19:55:30 +0200
+Served asset /jquery.snippet.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-08-13 19:55:30 +0200
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-08-13 19:55:30 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-08-13 19:55:30 +0200
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-08-13 19:55:49 +0200
+Processing by PostsController#last as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT `posts`.* FROM `posts` ORDER BY created_at DESC
+  Rendered posts/last.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-08-13 19:55:49 +0200
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2012-08-13 19:55:49 +0200
+Served asset /categories.css - 200 OK (0ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2012-08-13 19:55:49 +0200
+Served asset /comments.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.ui.css?body=1" for 127.0.0.1 at 2012-08-13 19:55:49 +0200
+Served asset /jquery.ui.css - 200 OK (0ms)
+
+
+Started GET "/assets/compilando.css?body=1" for 127.0.0.1 at 2012-08-13 19:55:49 +0200
+Served asset /compilando.css - 200 OK (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-08-13 19:55:49 +0200
+Served asset /users.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.css?body=1" for 127.0.0.1 at 2012-08-13 19:55:49 +0200
+Served asset /jquery.fancybox-1.3.4.css - 200 OK (0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-08-13 19:55:49 +0200
+Served asset /posts.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-08-13 19:55:49 +0200
+Served asset /jquery.js - 200 OK (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-08-13 19:55:49 +0200
+Served asset /scaffolds.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-08-13 19:55:49 +0200
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2012-08-13 19:55:49 +0200
+Served asset /categories.js - 200 OK (0ms)
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2012-08-13 19:55:49 +0200
+Served asset /comments.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.js?body=1" for 127.0.0.1 at 2012-08-13 19:55:49 +0200
+Served asset /jquery.fancybox-1.3.4.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.form.js?body=1" for 127.0.0.1 at 2012-08-13 19:55:49 +0200
+Served asset /jquery.form.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.qtip.js?body=1" for 127.0.0.1 at 2012-08-13 19:55:49 +0200
+Served asset /jquery.qtip.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.snippet.min.js?body=1" for 127.0.0.1 at 2012-08-13 19:55:49 +0200
+Served asset /jquery.snippet.min.js - 200 OK (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-08-13 19:55:49 +0200
+Served asset /posts.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-08-13 19:55:49 +0200
+Served asset /application.js - 200 OK (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-08-13 19:55:49 +0200
+Served asset /users.js - 200 OK (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-08-13 19:55:51 +0200
+Processing by PostsController#last as HTML
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT `posts`.* FROM `posts` ORDER BY created_at DESC[0m
+  Rendered posts/last.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 12ms (Views: 10.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2012-08-13 19:55:51 +0200
+Served asset /comments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-08-13 19:55:51 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2012-08-13 19:55:51 +0200
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/compilando.css?body=1" for 127.0.0.1 at 2012-08-13 19:55:51 +0200
+Served asset /compilando.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.css?body=1" for 127.0.0.1 at 2012-08-13 19:55:51 +0200
+Served asset /jquery.fancybox-1.3.4.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.css?body=1" for 127.0.0.1 at 2012-08-13 19:55:51 +0200
+Served asset /jquery.ui.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-08-13 19:55:51 +0200
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-08-13 19:55:51 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-08-13 19:55:51 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-08-13 19:55:51 +0200
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-08-13 19:55:51 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2012-08-13 19:55:51 +0200
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2012-08-13 19:55:51 +0200
+Served asset /comments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.js?body=1" for 127.0.0.1 at 2012-08-13 19:55:51 +0200
+Served asset /jquery.fancybox-1.3.4.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.form.js?body=1" for 127.0.0.1 at 2012-08-13 19:55:51 +0200
+Served asset /jquery.form.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.qtip.js?body=1" for 127.0.0.1 at 2012-08-13 19:55:51 +0200
+Served asset /jquery.qtip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.snippet.min.js?body=1" for 127.0.0.1 at 2012-08-13 19:55:51 +0200
+Served asset /jquery.snippet.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-08-13 19:55:51 +0200
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-08-13 19:55:51 +0200
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-08-13 19:55:51 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-08-13 19:57:05 +0200
+Processing by PostsController#last as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT `posts`.* FROM `posts` ORDER BY created_at DESC
+  Rendered posts/last.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-08-13 19:57:05 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2012-08-13 19:57:05 +0200
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-08-13 19:57:05 +0200
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.ui.css?body=1" for 127.0.0.1 at 2012-08-13 19:57:05 +0200
+Served asset /jquery.ui.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/compilando.css?body=1" for 127.0.0.1 at 2012-08-13 19:57:05 +0200
+Served asset /compilando.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2012-08-13 19:57:05 +0200
+Served asset /comments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.css?body=1" for 127.0.0.1 at 2012-08-13 19:57:05 +0200
+Served asset /jquery.fancybox-1.3.4.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-08-13 19:57:05 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-08-13 19:57:05 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-08-13 19:57:05 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-08-13 19:57:05 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2012-08-13 19:57:05 +0200
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2012-08-13 19:57:05 +0200
+Served asset /comments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.fancybox-1.3.4.js?body=1" for 127.0.0.1 at 2012-08-13 19:57:05 +0200
+Served asset /jquery.fancybox-1.3.4.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.form.js?body=1" for 127.0.0.1 at 2012-08-13 19:57:05 +0200
+Served asset /jquery.form.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.qtip.js?body=1" for 127.0.0.1 at 2012-08-13 19:57:05 +0200
+Served asset /jquery.qtip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.snippet.min.js?body=1" for 127.0.0.1 at 2012-08-13 19:57:05 +0200
+Served asset /jquery.snippet.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-08-13 19:57:05 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-08-13 19:57:05 +0200
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-08-13 19:57:05 +0200
+Served asset /application.js - 304 Not Modified (1ms)

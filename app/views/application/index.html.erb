@@ -1,6 +1,0 @@
-<% if session[:user_id] %>
-	<h1><%= raw _("Welcome to the <br/><br/><strong>iMprove iPhone App Management System</strong>") %></h1>
-<% else %>
-	<h1 class="squeeze-title center"><%= raw _("Welcome to <strong>iMprove</strong>") %></h1>
-	<%= render :template => 'users/registry' %>
-<% end %>
