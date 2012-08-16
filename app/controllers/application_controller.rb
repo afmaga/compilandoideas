@@ -14,7 +14,7 @@ class ApplicationController < ActionController::Base
 		params[:lang] = FastGettext.locale
 	end
 
-  def index
+  def index    
     
   end
 
