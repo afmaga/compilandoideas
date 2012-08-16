@@ -1,0 +1,48 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: version 0.0.1\n"
+"POT-Creation-Date: 2012-08-13 14:02+0200\n"
+"PO-Revision-Date: 2012-08-13 18:44+0100\n"
+"Last-Translator: Alejandro Fernando García Alcarria <afga1986@gmail.com>\n"
+"Language-Team: AFMAGA <afga1986@gmail.com>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-Language: Spanish\n"
+"X-Poedit-Country: SPAIN\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "Email:"
+msgstr ""
+
+msgid "Enter your email and password to access the <strong> Metarails Manager</strong>"
+msgstr ""
+
+msgid "Log In"
+msgstr ""
+
+msgid "New User? "
+msgstr ""
+
+msgid "Password forgotten?"
+msgstr ""
+
+msgid "Password:"
+msgstr ""
+
+msgid "User permissions required"
+msgstr ""
+
+msgid "Welcome to <strong>iMprove</strong>"
+msgstr ""
+
+msgid "Welcome to the <br/><br/><strong>iMprove iPhone App Management System</strong>"
+msgstr ""
+
