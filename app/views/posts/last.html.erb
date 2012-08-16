@@ -1,14 +1,22 @@
-<p>
-  <b>Title:</b>
+<p class="title">
+
   <%= @post.title %>
 </p>
 
-<p>
-  <b>Content:</b>
+<p class="content">
   <%= @post.content %>
 </p>
 
-<p>
-  <b>Author:</b>
-  <%= @post.author.name+" - "+@post.created_at %>
+<p class="author">
+  <%= @post.author.name.to_s+" - "+@post.created_at.to_s %>
 </p>
+
+<div class="previous_post">
+<%= @post.previous_post ? (button_to _("Previous Post "),@post.previous_post,  :method => 'get') : ''%>
+</div>
+<div class="related_post">
+<%#= @post.previous_post ? (button_to _("Previous Post "),@post.previous_post) : ''%>
+</div>
+<div class="later_post">
+<%= @post.later_post ? (button_to _("Later Post "),@post.later_post, :method => 'get') : ''%>
+</div>

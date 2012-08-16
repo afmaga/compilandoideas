@@ -1,101 +1,114 @@
 <!DOCTYPE html>
 <% @categories = Category.all %>
 <html>
-	<head>
-		<title>Compilando Ideas</title>
+  <head>
+    <title><%=_("Compilando Ideas")%></title>
 
-		<%= stylesheet_link_tag "application" %>
+    <%= stylesheet_link_tag "application" %>
 
-		<%= javascript_include_tag "application" %>
+    <%= javascript_include_tag "application" %>
 
-		<%= csrf_meta_tag %>
+    <%= csrf_meta_tag %>
 
-		<link rel="icon" href="/favicon.ico" type="image/ico" />
-		<link rel="shortcut icon" href="/favicon.ico" type="image/ico" />
+    <link rel="icon" href="/favicon.ico" type="image/ico" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/ico" />
 
-	</head>
-<% content_for :header do %>
-          <div id="tittle">
-            <h1 id="maintitle"><%=  "Compilando..." %></h1>
-          </div>
-<% end %>
-        
-<% content_for :footer do %>
-
-        <div>	<%=  "CompilandoIdeas.es " %><%= "powered by RubyOnRails, designed by Afmaga @ 2012" %><%="- All Rights Reserved" %></div>
-<% end %>
-
-<% content_for :sidebar_left  do %>
-   <div id="menu">
-         <ul>
-        <li id="users">
-      <a href="/"><%=_("Home")%></a>
-    </li>
-    <% @categories.each do |cat| %>
-       <li id="categories">
-          <a href="/categories<%=cat.id%>"><%=cat.title%></a>
-       </li>
-    <% end %>
-    <% if session && session[:role] == "admin" %>      
-       <li id="users">
-          <a href="/users"><%=_("Usuarios")%></a>
-       </li>
-       <li id="users">
-        <a href="/users/<%=session[:user_id]%>"><%=_("Profile")%></a>
-      </li>
-      <li id="categories">
-          <a href="/posts"><%=_("Posts")%></a>
-       </li>
-       <li id="categories">
-          <a href="/categories"><%=_("Categories")%></a>
-       </li>
-    <% elsif session && session[:role] == 'user' %>
-      <li id="users">
-        <a href="/users/<%=session[:user_id]%>"><%=_("Profile")%></a>
-      </li>
-    <% else %>
-    <li id="users">
-      <a href="/sessions/new"><%=_("Login")%></a>
-    </li>
-       <% end %>
-    </ul>
+  </head>
+  <% content_for :header do %>
+    <div id="tittle">
+      <h1 id="maintitle"><%=  "Compilando..." %></h1>
     </div>
-<%end%>
+  <% end %>
 
-<% content_for :sidebar_right  do %>
+  <% content_for :footer do %>
 
-      <div id="menu-right">
-        
+    <div>	<%=  "CompilandoIdeas.es " %><%= "powered by RubyOnRails, designed by Afmaga @ 2012" %><%="- All Rights Reserved" %></div>
+  <% end %>
+
+  <% content_for :sidebar_left  do %>
+    <div id="menu">
+      <ul>
+        <li id="users">
+          <a href="/"><%=_("Home")%></a>
+        </li>
+        <% @categories.each do |cat| %>
+          <li id="categories">
+            <a href="/categories<%=cat.id%>"><%=cat.title%></a>
+          </li>
+        <% end %>
+        <% if session && session[:role] == "admin" %>
+          <li id="users">
+            <a href="/users"><%=_("Usuarios")%></a>
+          </li>
+          <li id="users">
+            <a href="/users/<%=session[:user_id]%>"><%=_("Profile")%></a>
+          </li>
+          <li id="categories">
+            <a href="/posts"><%=_("Posts")%></a>
+          </li>
+          <li id="categories">
+            <a href="/categories"><%=_("Categories")%></a>
+          </li>
+        <% elsif session && session[:role] == 'user' %>
+          <li id="users">
+            <a href="/users/<%=session[:user_id]%>"><%=_("Profile")%></a>
+          </li>
+        <% else %>
+          <li id="users">
+            <a href="/sessions/new"><%=_("Login")%></a>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  <%end%>
+
+  <% content_for :sidebar_right  do %>
+
+    <div id="menu-right">
+      <ul>
+        <li id="users">
+          <a href="/users"><%=_("Usuarios")%></a>
+        </li>
+        <li id="users">
+          <a href="/users/<%=session[:user_id]%>"><%=_("Profile")%></a>
+        </li>
+        <li id="categories">
+          <a href="/posts"><%=_("Posts")%></a>
+        </li>
+        <li id="categories">
+          <a href="/categories"><%=_("Categories")%></a>
+        </li>
+      </ul>
+    </div>
+  <%end%>
+
+
+  <% #END OF YIELD DEFINITION %>
+  <body>
+    <div id="out-contain">
+      <div id="contain">
+        <div id="header">
+          <%= yield :header %>
+        </div>
+        <div style="margin-top:15px;clear:both;"><hr/></div>
+        <div id="main">
+          <div id="sidebar">
+            <%= yield :sidebar_left %>
+          </div>
+          <div id="content">
+            <%= yield %>
+          </div>
+          <div id="sidebar">
+            <%= yield :sidebar_right %>
+          </div>
+        </div>
+
       </div>
-<%end%>
+      <div id="footer">
+        <%= yield :footer %>
+      </div>
+    </div>
 
 
-<% #END OF YIELD DEFINITION %>
-<body>
-	<div id="out-contain">
-		<div id="contain">
-			<div id="header">
-				<%= yield :header %>
-			</div>
-                  <div style="margin-top:15px;clear:both;"><hr/></div>
-			<div id="main">
-                                <div id="sidebar">
-					<%= yield :sidebar_left %>
-				</div>
-				<div id="content">
-					<%= yield %>
-				</div>
-                                <div id="sidebar">
-					<%= yield :sidebar_right %>
-				</div>
-			</div>
-
-		</div>
-		<div id="footer">
-			<%= yield :footer %>
-		</div>
-		</div>
-
-
-</body>
+  </body>
 </html>

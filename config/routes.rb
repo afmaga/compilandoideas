@@ -17,7 +17,7 @@ Compilandoideas::Application.routes.draw do
 		get 'logout' => :destroy
 	end
 
-  match ':controller(/:action)(/:id)', :constraints => { :id => /\d/}
+  match ':controller(/:action)(/:id)'
 
 
 
