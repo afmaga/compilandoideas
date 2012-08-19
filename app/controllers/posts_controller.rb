@@ -14,7 +14,7 @@ class PostsController < ApplicationController
   # GET /posts/1.json
   def show
     @post = Post.find(params[:id])
-
+    @status = Hash.new
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @post }
@@ -25,7 +25,9 @@ class PostsController < ApplicationController
   # GET /posts/new.json
   def new
     @post = Post.new
-
+    @status = Array.new
+    @status.push('Borrador')
+    @status.push('Published')
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @post }
@@ -41,9 +43,14 @@ class PostsController < ApplicationController
   # POST /posts.json
   def create
     @post = Post.new(params[:post])
-
+    @post.title = (@post.title).upcase
+    @previous_post =  Post.find(:all, :order =>'created_at ASC', :conditions => {:status =>'Published'})
+    @post.later_post_id = @previous_post.first.id
+    @post.author_id = session[:user_id]
     respond_to do |format|
       if @post.save
+        @previous_post.first.previous_post_id = @post.id
+        @previous_post.first.save
         format.html { redirect_to @post, notice: 'Post was successfully created.' }
         format.json { render json: @post, status: :created, location: @post }
       else
@@ -82,7 +89,7 @@ class PostsController < ApplicationController
   end
 
   def last
-    posts = Post.order('created_at DESC').all
+    posts =  Post.find(:all, :order =>'created_at ASC', :conditions => {:status =>'Published'})
     @post = posts.first
     respond_to do |format|
       format.html # show.html.erb

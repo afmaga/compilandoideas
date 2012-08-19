@@ -12,16 +12,16 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :title %><br />
+    <%= _("Title") %><br />
     <%= f.text_field :title %>
   </div>
   <div class="field">
-    <%= f.label :description %><br />
+    <%= _("Description") %><br />
     <%= f.text_field :description %>
   </div>
   <div class="field">
-    <%= f.label :category_id %><br />
-    <%= f.number_field :category_id %>
+    <%= _("Parent Category ID") %><br />
+    <%= f.collection_select(:parent_category_id,@parent_categories,:id,:title,{:prompt => _('Select a Category')}) %>
   </div>
   <div class="actions">
     <%= f.submit %>

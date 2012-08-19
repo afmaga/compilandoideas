@@ -25,7 +25,7 @@ class CategoriesController < ApplicationController
   # GET /categories/new.json
   def new
     @category = Category.new
-
+    @parent_categories =  Category.find_all_by_parent_category_id(nil)
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @category }
@@ -35,13 +35,14 @@ class CategoriesController < ApplicationController
   # GET /categories/1/edit
   def edit
     @category = Category.find(params[:id])
+    @parent_categories =  Category.find_all_by_parent_category_id(nil)
   end
 
   # POST /categories
   # POST /categories.json
   def create
     @category = Category.new(params[:category])
-
+    @parent_categories =  Category.find_all_by_parent_category_id(nil)
     respond_to do |format|
       if @category.save
         format.html { redirect_to @category, notice: 'Category was successfully created.' }
@@ -57,7 +58,7 @@ class CategoriesController < ApplicationController
   # PUT /categories/1.json
   def update
     @category = Category.find(params[:id])
-
+    @parent_categories =  Category.find_all_by_parent_category_id(nil)
     respond_to do |format|
       if @category.update_attributes(params[:category])
         format.html { redirect_to @category, notice: 'Category was successfully updated.' }

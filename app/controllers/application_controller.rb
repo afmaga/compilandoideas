@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
-
+  before_filter :define_categories
 
   def set_user
 		if session && session[:user_id]
@@ -19,6 +19,11 @@ class ApplicationController < ActionController::Base
   end
 
   protected
+
+  def define_categories
+    @categories = Category.all
+  end
+
 	def authorize_admin
 
 			if session[:role] != "admin"

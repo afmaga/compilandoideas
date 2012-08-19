@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<% @categories = Category.all %>
+<% #@categories = Category.all %>
 <html>
   <head>
     <title><%=_("Compilando Ideas")%></title>
@@ -33,7 +33,14 @@
         </li>
         <% @categories.each do |cat| %>
           <li id="categories">
-            <a href="/categories<%=cat.id%>"><%=cat.title%></a>
+            <%= link_to cat.title, cat%>
+            <% if cat.sub_cats  %>
+            <ul>            
+            <li id="categories">
+              <%= link_to cat.title, cat%>
+            </li>
+            </ul>
+            <%end%>
           </li>
         <% end %>
         <% if session && session[:role] == "admin" %>

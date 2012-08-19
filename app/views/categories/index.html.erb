@@ -1,10 +1,10 @@
-<h1>Listing categories</h1>
+<h1><%=_("Listing categories")%></h1>
 
 <table>
   <tr>
-    <th>Title</th>
-    <th>Description</th>
-    <th>Category</th>
+    <th><%= _("Title") %></th>
+    <th><%= _("Description")%></th>
+    <th><%= _("Category") %></th>
     <th></th>
     <th></th>
     <th></th>
@@ -14,14 +14,14 @@
   <tr>
     <td><%= category.title %></td>
     <td><%= category.description %></td>
-    <td><%= category.category_id %></td>
-    <td><%= link_to 'Show', category %></td>
-    <td><%= link_to 'Edit', edit_category_path(category) %></td>
-    <td><%= link_to 'Destroy', category, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= category.parent_category ? (link_to category.parent_category.title,category.parent_category_id) : ''%></td>
+    <td><%= link_to(image_tag('show.png',:alt => _('Show'), :title => _('Show')), category) %></td>
+    <td><%= link_to(image_tag('edit.png',:alt => _('Edit'), :title => _('Edit')), edit_category_path(category)) %></td>
+    <td><%= link_to image_tag("destroy.png", :border=>0, :title => _("Destroy"), :alt => _("Destroy")),  {:controller => "categories", :action => "destroy", :id => category.id }, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Category', new_category_path %>
+<%= link_to 'New Category', new_category_path, :class => 'new' %>

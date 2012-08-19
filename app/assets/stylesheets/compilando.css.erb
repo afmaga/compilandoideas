@@ -20,8 +20,8 @@ body{
     overflow:hidden;
 }
 #footer{
-    background: #222;
-    height: 100px;
+    background: #4088C4;
+    height: 39px;
     padding: 10px 0 0 0;
     margin-top: 0px;
     color: #f6f6f6;
@@ -60,7 +60,7 @@ body{
     text-align: center;
 }
 a, a:visited, a:active, a:link{
-    color:black;
+    color:white;
 }
 
 
@@ -125,11 +125,18 @@ a, a:visited, a:active, a:link{
 
 }
 
+#sidebar ul li{
+    display: block;
+    font-size: 18px;
+    color: #777;
+    font-family: verdana, arial, helvetica, sans-serif;
+}
+
 #maintitle{
-    font-size: 250%;
+    font-size: 300%;
     text-align: center;
     font-weight: lighter;
-    color: #333;
+    color: #4088C4;
     padding: 15px 0;
 }
 
@@ -142,8 +149,32 @@ a, a:visited, a:active, a:link{
 
 }
 .title{
-
+    font-size: 200%;
+    text-align: left;
+    font-weight: lighter;
+    font-family: verdana, arial, helvetica, sans-serif;
+    color: #3008C4;
+    padding: 15px 0;
+    font-style : italic
 }
 .content{
 }
 
+.new{
+  background: transparent url(<%= asset_path "new.png" %>) no-repeat;
+  padding-left: 18px;
+    font-size : 15px;
+}
+
+.show{
+  background: transparent url(<%= asset_path "show.png" %>) no-repeat;
+  padding-left: 18px;
+  font-size : 15px;
+}
+
+
+.index{
+  background: transparent url(<%= asset_path "index.png" %>) no-repeat;
+  padding-left: 18px;
+    font-size : 15px;
+}

@@ -1,31 +1,32 @@
-<h1>Listing posts</h1>
+<h1><%= _("Listing posts") %></h1>
 
-<table>
+<table class="list">
+  <thead>
   <tr>
-    <th>Title</th>
-    <th>Content</th>
-    <th>Status</th>
-    <th>Author</th>
-    <th>Category</th>
+    <th><%= _("Title") %></th>
+    <th><%= _("Status") %></th>
+    <th><%= _("Author") %></th>
+    <th><%= _("Category") %></th>
     <th></th>
     <th></th>
     <th></th>
   </tr>
-
+</thead>
+<tbody>
 <% @posts.each do |post| %>
   <tr>
     <td><%= post.title %></td>
-    <td><%= post.content %></td>
     <td><%= post.status %></td>
-    <td><%= post.author_id %></td>
-    <td><%= post.category_id %></td>
-    <td><%= link_to 'Show', post %></td>
-    <td><%= link_to 'Edit', edit_post_path(post) %></td>
-    <td><%= link_to 'Destroy', post, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= post.author ? (link_to post.author.name.to_s, post.author) : '' %></td>
+    <td><%= post.category ? (link_to post.category.title, post.category) : '' %></td>
+    <td><%= link_to(image_tag('show.png',:alt => _('Show'), :title => _('Show')), post) %></td>
+    <td><%= link_to(image_tag('edit.png',:alt => _('Edit'), :title => _('Edit')), edit_post_path(post)) %></td>
+     <td><%= link_to image_tag("destroy.png", :border=>0, :title => _("Destroy"), :alt => _("Destroy")),  {:controller => "posts", :action => "destroy", :id => post.id }, :confirm => 'Are you sure?', :method => :delete %></td>  
   </tr>
 <% end %>
+  </tbody>
 </table>
 
 <br />
 
-<%= link_to 'New Post', new_post_path %>
+<%= link_to 'New Post', new_post_path, :class => 'new' %>
