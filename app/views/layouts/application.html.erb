@@ -72,20 +72,11 @@
   <% content_for :sidebar_right  do %>
 
     <div id="menu-right">
-      <ul>
-        <li id="users">
-          <a href="/users"><%=_("Usuarios")%></a>
-        </li>
-        <li id="users">
-          <a href="/users/<%=session[:user_id]%>"><%=_("Profile")%></a>
-        </li>
-        <li id="categories">
-          <a href="/posts"><%=_("Posts")%></a>
-        </li>
-        <li id="categories">
-          <a href="/categories"><%=_("Categories")%></a>
-        </li>
-      </ul>
+      <% if @comments && @comments.size() > 0 %>
+       <% @comments.each do |comment| %>
+        <% render partial comment %>
+        <%  end %>
+      <% end %>
     </div>
   <%end%>
 
@@ -105,9 +96,11 @@
           <div id="content">
             <%= yield %>
           </div>
+          <% if @comments && @comments.size() > 0 %>
           <div id="sidebar">
             <%= yield :sidebar_right %>
           </div>
+          <%end%>
         </div>
 
       </div>

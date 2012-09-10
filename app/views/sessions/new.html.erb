@@ -8,7 +8,7 @@
   <%= form_tag('/login') do  %>
     <%if @from != 'index'%>
     <h3><%= _('Log In') %></h3>
-    <p><%= raw  _("Enter your email and password to access the <strong> Metarails Manager</strong>")  %>:</p>
+    <p><%= raw  _("Enter your email and password to access <strong> CompilandoIdeas</strong>")  %>:</p>
     <%end%>
     <table class="noalt" style="width: 400px;text-align:left;font-size: 18px;">
       <tr><td><%=_("New User? ")%></td><td><%= link_to 'Register here',{:action => 'new', :controller => 'users'}  %></td></tr>

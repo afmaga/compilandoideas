@@ -42,25 +42,17 @@ body{
     margin: 0 auto;
     height: 110px;
 }
-#menu-big{
-    width: 660px;
-    margin: 0 auto;
-    height: 180px;
-}
 #main{
     height:100%
     width: 100%;
 }
-#header ul li {
-    display: inline;
-    float: left;
-    font-family: 'Trebuchet MS',Verdana,Arial,sans-serif;
-    font-size: 14px;
-    font-weight: bold;
-    text-align: center;
+
+a, a:active, a:link {
+  color:black;
 }
-a, a:visited, a:active, a:link{
-    color:white;
+
+a:visited{
+    color: grey;
 }
 
 
@@ -78,37 +70,6 @@ a, a:visited, a:active, a:link{
 #iphone_content img{
     max-width:220px;
     margin-left:10px;
-}
-#header ul li a, #header ul li a:visited, #header ul li a:link {
-    display: block;
-    height: 20px;
-    line-height: 20px;
-    padding: 64px 0 0;
-    text-align: center;
-    width: 118px;
-    font-weight: lighter;
-    background-repeat: no-repeat;
-    background-position: top center;
-    color: #777;
-    text-decoration: none;
-}
-#header ul li a:hover, #header ul li a:active{
-    background-color: #fff;
-}
-#header #home a {
-    background-image: url(<%= asset_path "menu-images/home.png" %>);
-}
-#header #applications a {
-    background-image: url(<%= asset_path "menu-images/apps.png" %>);
-}
-#header ul li a:hover{
-    color:#000;
-}
-#header #home a:hover {
-    background-image: url(<%= asset_path "menu-images/home-hover.png" %>);
-}
-#header #applications a:hover {
-    background-image: url(<%= asset_path "menu-images/apps-hover.png" %>);
 }
 
 #content{
@@ -157,8 +118,6 @@ a, a:visited, a:active, a:link{
     padding: 15px 0;
     font-style : italic
 }
-.content{
-}
 
 .new{
   background: transparent url(<%= asset_path "new.png" %>) no-repeat;
@@ -177,4 +136,44 @@ a, a:visited, a:active, a:link{
   background: transparent url(<%= asset_path "index.png" %>) no-repeat;
   padding-left: 18px;
     font-size : 15px;
+}
+
+.list{
+  width : 100%;
+}
+
+.list thead tr{
+  background-color : grey;
+  color : white;
+}
+
+.list tfoot tr{
+  background-color : grey;
+  color : white;
+}
+
+h1{
+text-align : center;
+}
+
+a:hover{
+    background-color : grey;
+    color : #fff !important;
+
+}
+
+.status_published{
+  color:green;
+}
+
+.status_deleted{
+  color:red;
+}
+
+abbr{
+  background-color : grey;
+  color : white ;
+  font-weight : bold;
+  cursor: help;
+
 }

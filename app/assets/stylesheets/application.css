@@ -9,5 +9,7 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require_tree .
+ *= require compilando
+ *= require jquery.ui
+ *= require jquery.fancybox-1.3.4
 */

@@ -15,6 +15,7 @@ class PostsController < ApplicationController
   def show
     @post = Post.find(params[:id])
     @status = Hash.new
+    @comments = @post.comments
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @post }
@@ -25,9 +26,10 @@ class PostsController < ApplicationController
   # GET /posts/new.json
   def new
     @post = Post.new
+    @post.published_date = DateTime.now
     @status = Array.new
-    @status.push('Borrador')
-    @status.push('Published')
+    @status.push('borrador')
+    @status.push('published')
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @post }
@@ -80,7 +82,8 @@ class PostsController < ApplicationController
   # DELETE /posts/1.json
   def destroy
     @post = Post.find(params[:id])
-    @post.destroy
+    @post.status = 'deleted'
+    @post.save
 
     respond_to do |format|
       format.html { redirect_to posts_url }
@@ -94,6 +97,17 @@ class PostsController < ApplicationController
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @post }
+    end
+  end
+
+  def publish_now
+    post = Post.find_by_id(params[:id])
+    post.status = 'Published'
+    post.published_date = DateTime.now
+    post.save
+    respond_to do |format|
+      format.html { redirect_to posts_url }
+      format.json { head :no_content }
     end
   end
 

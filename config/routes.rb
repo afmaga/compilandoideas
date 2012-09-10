@@ -6,6 +6,8 @@ Compilandoideas::Application.routes.draw do
 
   resources :comments
 
+  match 'post/publish_now' => 'posts#publish_now'
+
   resources :posts
 
   resources :users
