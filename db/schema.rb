@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120910074542) do
+ActiveRecord::Schema.define(:version => 20120910181009) do
 
   create_table "categories", :force => true do |t|
     t.string   "title"
@@ -23,20 +23,20 @@ ActiveRecord::Schema.define(:version => 20120910074542) do
 
   create_table "comments", :force => true do |t|
     t.integer  "author_id"
-    t.string   "status"
     t.text     "content"
     t.integer  "post_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
     t.boolean  "deleted"
     t.boolean  "published"
     t.boolean  "draft"
+    t.boolean  "pending"
+    t.datetime "published_date"
   end
 
   create_table "posts", :force => true do |t|
     t.string   "title"
     t.text     "content"
-    t.string   "status"
     t.integer  "author_id"
     t.integer  "category_id"
     t.datetime "created_at",       :null => false
@@ -47,6 +47,7 @@ ActiveRecord::Schema.define(:version => 20120910074542) do
     t.boolean  "published"
     t.boolean  "deleted"
     t.boolean  "draft"
+    t.boolean  "programmed"
   end
 
   create_table "users", :force => true do |t|

@@ -30,19 +30,7 @@
       <ul>
         <li id="users">
           <a href="/"><%=_("Home")%></a>
-        </li>
-        <% @categories.each do |cat| %>
-          <li id="categories">
-            <%= link_to cat.title, cat%>
-            <% if cat.sub_cats  %>
-            <ul>            
-            <li id="categories">
-              <%= link_to cat.title, cat%>
-            </li>
-            </ul>
-            <%end%>
-          </li>
-        <% end %>
+        </li>        
         <% if session && session[:role] == "admin" %>
           <li id="users">
             <a href="/users"><%=_("Usuarios")%></a>
@@ -56,6 +44,12 @@
           <li id="categories">
             <a href="/categories"><%=_("Categories")%></a>
           </li>
+          <li id="categories">
+            <a href="/comments"><%=_("Comments")%></a>
+          </li>
+          <li id="categories">
+            <a href="/comments/pending_comments"><%=_("Pending Comments")%></a>
+          </li>
         <% elsif session && session[:role] == 'user' %>
           <li id="users">
             <a href="/users/<%=session[:user_id]%>"><%=_("Profile")%></a>
@@ -65,6 +59,18 @@
             <a href="/sessions/new"><%=_("Login")%></a>
           </li>
         <% end %>
+          <% @categories.each do |cat| %>
+          <li id="categories">
+            <%= link_to cat.title, cat%>
+            <% if cat.sub_cats  %>
+            <ul>
+              <li id="categories">
+                <%= link_to cat.title, cat%>
+              </li>
+            </ul>
+            <%end%>
+          </li>
+        <% end %>
       </ul>
     </div>
   <%end%>
@@ -72,10 +78,14 @@
   <% content_for :sidebar_right  do %>
 
     <div id="menu-right">
-      <% if @comments && @comments.size() > 0 %>
+      <% if @comments && @comments.size > 0 %>
        <% @comments.each do |comment| %>
-        <% render partial comment %>
+        <% @comment = comment %>
+        <%= render :template => 'comments/show' %>
         <%  end %>
+      <% end %>
+      <% if @comment %>
+      <%= render :template => 'comments/new'  %>
       <% end %>
     </div>
   <%end%>
@@ -96,8 +106,8 @@
           <div id="content">
             <%= yield %>
           </div>
-          <% if @comments && @comments.size() > 0 %>
-          <div id="sidebar">
+          <% if @comments && @comments.size > 0 %>
+          <div id="sidebar-right">
             <%= yield :sidebar_right %>
           </div>
           <%end%>

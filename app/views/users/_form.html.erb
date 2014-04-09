@@ -1,48 +1,60 @@
+<p style="text-align:right"><strong><%= _("Note") %></strong>: <%= raw  _("Fields with the <span class='mandatory'>red asterisk</span> are mandatory.") %></p>
+
 <%= form_for(@user) do |f| %>
   <% if @user.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+      <h2><%= pluralize(@user.errors.count, "error") %> <%=  _("prohibited this user from being saved:") %></h2>
 
       <ul>
-      <% @user.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
+        <% @user.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
       </ul>
     </div>
   <% end %>
-
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :hashed_password %><br />
-    <%= f.text_field :hashed_password %>
-  </div>
-  <div class="field">
-    <%= f.label :salt %><br />
-    <%= f.text_field :salt %>
-  </div>
-  <div class="field">
-    <%= f.label :name %><br />
+    <%= _("User Name") %><span class="mandatory">*</span><br />
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :f_name %><br />
+    <%= _("Email") %><span class="mandatory">*</span><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= _("Password") %><span class="mandatory">*</span><br />
+    <%= f.password_field :password %>
+  </div>
+  <div class="field">
+    <%= _("Confirm Password") %><span class="mandatory">*</span><br />
+    <%= f.password_field :password_confirmation %>
+  </div>
+
+  <div class="field">
+    <%= _("First Name") %><br />
     <%= f.text_field :f_name %>
   </div>
   <div class="field">
-    <%= f.label :l_name %><br />
+    <%= _("Last Name") %><br />
     <%= f.text_field :l_name %>
   </div>
-  <div class="field">
-    <%= f.label :active %><br />
-    <%= f.check_box :active %>
+
+    <div class="field">
+    <%= _("Web page") %><br />
+    <%= f.text_field :web %>
   </div>
-  <div class="field">
-    <%= f.label :role %><br />
-    <%= f.text_field :role %>
-  </div>
+
+  <% if session[:role] == 'admin' %>
+    <div class="field">
+      <%= _("Active") %><br />
+      <%= f.checkbox :active %>
+    </div>
+    <div class="field">
+      <%= _("Role") %><br />
+      <%= f.text_field :role %>
+    </div>
+
+  <%end%><br />
+
   <div class="actions">
     <%= f.submit %>
   </div>

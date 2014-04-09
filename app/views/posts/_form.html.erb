@@ -70,14 +70,12 @@
     <%= _("Content") %><br />
     <%= f.text_area :content, :class => 'mceArea'%>
   </div>
-  <div class="field">
-    <%= _("Status") %><br />
-    <%= f.select(:status,@status) %>
-  </div>
+
   <div class="field">
     <%= _("Category") %><br />
     <%= f.collection_select(:category_id,@categories,:id,:title) %>
-  </div> <br/>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div> <br/>

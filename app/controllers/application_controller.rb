@@ -28,21 +28,16 @@ class ApplicationController < ActionController::Base
 
 			if session[:role] != "admin"
 
-				redirect_to url_for(:controller => "application", :action => "index"), :alert => _("User permissions required") and return 1
+				redirect_to welcome_url, :alert => _("User permissions required") and return 1
 			end
 
 	end
+
 	def authorize
 		session[:return_to] = request.fullpath
-
-		#@array =  ApplicationController.get_models
-		#@array.each do |a|
-		#	logger.info a
-		#end
-
+	
 		unless User.find_by_id(session[:user_id])
 			redirect_to login_url, :alert => "Please log in" and return 1
-
 
 		end
 	end

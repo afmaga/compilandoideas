@@ -27,9 +27,6 @@ class PostsController < ApplicationController
   def new
     @post = Post.new
     @post.published_date = DateTime.now
-    @status = Array.new
-    @status.push('borrador')
-    @status.push('published')
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @post }
@@ -45,8 +42,8 @@ class PostsController < ApplicationController
   # POST /posts.json
   def create
     @post = Post.new(params[:post])
-    @post.title = (@post.title).upcase
-    @previous_post =  Post.find(:all, :order =>'created_at ASC', :conditions => {:status =>'Published'})
+    @post.title = (@post.title).capitalize
+    @previous_post =  Post.find(:all, :order =>'published_date ASC', :conditions => {:published => 'true'})
     @post.later_post_id = @previous_post.first.id
     @post.author_id = session[:user_id]
     respond_to do |format|
@@ -66,10 +63,11 @@ class PostsController < ApplicationController
   # PUT /posts/1.json
   def update
     @post = Post.find(params[:id])
+    params[:post][:title] = params[:post][:title].split(' ').map {|w| w.capitalize }.join(' ')
 
     respond_to do |format|
       if @post.update_attributes(params[:post])
-        format.html { redirect_to @post, notice: 'Post was successfully updated.' }
+        format.html { redirect_to posts_url, notice: 'Post was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
@@ -81,9 +79,12 @@ class PostsController < ApplicationController
   # DELETE /posts/1
   # DELETE /posts/1.json
   def destroy
-    @post = Post.find(params[:id])
-    @post.status = 'deleted'
-    @post.save
+    post = Post.find(params[:id])
+    post.deleted = true
+    post.published = false
+    post.draft = false
+    post.programmed = false
+    post.save
 
     respond_to do |format|
       format.html { redirect_to posts_url }
@@ -92,18 +93,24 @@ class PostsController < ApplicationController
   end
 
   def last
-    posts =  Post.find(:all, :order =>'created_at ASC', :conditions => {:status =>'Published'})
-    @post = posts.first
+    posts =  Post.find(:all, :order =>'published_date ASC', :conditions => {:published => 'true'})
+    if posts.is_a?(Array) && posts.size > 0
+      @post = posts.first
+      @comments = @post.published_comments
+    else
+      @post = Post.new
+    end
+
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @post }
     end
   end
 
-  def publish_now
+  def program
     post = Post.find_by_id(params[:id])
-    post.status = 'Published'
-    post.published_date = DateTime.now
+    post.programmed = true   
+    post.published_date = params[:date]
     post.save
     respond_to do |format|
       format.html { redirect_to posts_url }

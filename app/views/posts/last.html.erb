@@ -6,11 +6,11 @@
 <p class="content">
   <%= @post.content %>
 </p>
-
+<%if @post.author%>
 <p class="author">
   <%= @post.author.name.to_s+" - "+@post.created_at.to_s %>
 </p>
-
+<%end%>
 <div class="previous_post">
 <%= @post.previous_post ? (button_to _("Previous Post "),@post.previous_post,  :method => 'get') : ''%>
 </div>

@@ -80,4 +80,13 @@ class CommentsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def pending_comments
+     @comments = Comment.find_all_by_pending(true)
+
+    respond_to do |format|
+      format.html # pending_comments.html.erb
+      format.json { render json: @comments }
+    end
+  end
 end

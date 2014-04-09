@@ -2,44 +2,45 @@
 
 <table class="list">
   <thead>
-  <tr>
-    <th><%= _("Title") %></th>
-    <th><%= _("Status") %></th>
-    <th><%= _("Published Date") %></th>
-    <th><%= _("Author") %></th>
-    <th><%= _("Category") %></th>
-    <th colspan="4"></th>
-  </tr>
-</thead>
-<tbody>
-<% @posts.each do |post| %>
-  <tr>
-    <td><%= post.title %></td>
-    <td class="<% if post.status.to_s =="published" %>
-                      <%='status_published'%>
-                <%elsif post.status == "deleted" %>
-                      <%='status_deleted'%> <%end%>"
-                  >
-        <%= post.status %></td>
-    <td><%= post.published_date %></td>
-    <td><%= post.author ? (link_to post.author.name.to_s, post.author) : '' %></td>
-    <td><%= post.category ? (link_to post.category.title, post.category) : '' %></td>
-    <td><%= link_to image_tag('show.png',:alt => _('Show'), :title => _('Show')), post %></td>
-    <td><%= link_to image_tag('edit.png',:alt => _('Edit'), :title => _('Edit')), edit_post_path(post) %></td>
-    <td><%= link_to image_tag('publish.png',:alt => _('Publish'), :title => _('Publish')), {:controller => 'posts', :action => 'publish_now', :id => post.id}, :confirm => 'Are you sure?' %></td>
-     <td><%= link_to image_tag("destroy.png", :border=>0, :title => _("Destroy"), :alt => _("Destroy")),  {:controller => "posts", :action => "destroy", :id => post.id }, :confirm => 'Are you sure?', :method => :delete %></td>  
-  </tr>
-<% end %>
+    <tr>
+      <th><%= _("Title") %></th>
+      <th><%= _("Status") %></th>
+      <th><%= _("Published Date") %></th>
+      <th><%= _("Author") %></th>
+      <th><%= _("Category") %></th>
+      <th colspan="4"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @posts.each do |post| %>
+      <tr>
+        <td><%= post.title %></td>
+        <td class="<%=post.published ? 'status_published' : ( post.deleted ? 'status_deleted' : ( post.programmed ? 'status_programmed' : ''))  %>">
+          <%= post.status %></td>
+        <td><%= post.published_date %></td>
+        <td><%= post.author ? (link_to post.author.name.to_s, post.author) : '' %></td>
+        <td><%= post.category ? (link_to post.category.title, post.category) : '' %></td>
+        <td><%= link_to image_tag('show.png',:alt => _('Show'), :title => _('Show')), post %></td>
+        <td><%= link_to image_tag('edit.png',:alt => _('Edit'), :title => _('Edit')), edit_post_path(post) %></td>
+        <td><% if !post.published %>
+            <%= link_to image_tag('program.png',:alt => _('Program'), :title => _('Program')), {:controller => 'posts', :action => 'program', :id => post.id} %>
+          <% else %>
+            <%= image_tag('program.png',:alt => _('Already Publis'), :title => _('Already Publish')) %>
+          <% end%>
+        </td>
+        <td><%= link_to image_tag("destroy.png", :border=>0, :title => _("Destroy"), :alt => _("Destroy")),  {:controller => "posts", :action => "destroy", :id => post.id }, :confirm => 'Are you sure?', :method => :delete %></td>
+      </tr>
+    <% end %>
   </tbody>
   <tfoot>
     <tr>
-    <th><%= _("Title") %></th>
-    <th><%= _("Status") %></th>
-    <th><%= _("Published Date") %></th>
-    <th><%= _("Author") %></th>
-    <th><%= _("Category") %></th>
-    <th colspan="3"></th>
-  </tr>
+      <th><%= _("Title") %></th>
+      <th><%= _("Status") %></th>
+      <th><%= _("Published Date") %></th>
+      <th><%= _("Author") %></th>
+      <th><%= _("Category") %></th>
+      <th colspan="4"></th>
+    </tr>
   </tfoot>
 </table>
 

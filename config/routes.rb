@@ -1,14 +1,18 @@
 Compilandoideas::Application.routes.draw do
   
-  root :to => 'posts#last'
+  root :to => 'posts#last', :as => :welcome
 
   resources :categories
 
+  match 'comments/pending_comments' => 'comments#pending_comments'
+
   resources :comments
 
-  match 'post/publish_now' => 'posts#publish_now'
+  match 'posts/program' => 'posts#program'
 
   resources :posts
+
+  match 'profile(/:id)' => 'users#show#(/:id)', :as => :profile
 
   resources :users
 

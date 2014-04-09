@@ -13,10 +13,10 @@ class SessionsController < ApplicationController
 	def create
 #raise 'adios'
 		if user = User.authenticate_email(params[:email], params[:password])      
-			session[:user_id] = {:value => user.id , :expires => 1.minute.from_now}
-			session[:name] = {:value => user.name , :expires => 1.minute.from_now}
-			session[:email] = {:value => user.email , :expires => 1.minute.from_now}
-      session[:role] = {:value => user.rol , :expires => 1.minute.from_now}
+			session[:user_id] = user.id
+			session[:name] = user.name 
+			session[:email] = user.email
+      session[:role] = user.role 
 			#user.createmenus
 
 			if session[:return_to]

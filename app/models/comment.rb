@@ -5,4 +5,16 @@ class Comment < ActiveRecord::Base
 
   validates :content, :presence => true
 
+  def status
+    if self.published
+      return 'Published'
+    elsif self.pending
+      return 'Programmed'
+    elsif self.deleted
+      return 'Deleted'
+    else
+      return 'Draft'
+    end
+  end
+
 end

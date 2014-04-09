@@ -7,4 +7,20 @@ class Post < ActiveRecord::Base
   has_one :later_post, :class_name => 'Post', :foreign_key => 'later_post_id'
   has_many :comments
 
+  def status
+    if self.published
+      return 'Published'
+    elsif self.programmed
+      return 'Programmed'
+    elsif self.deleted
+      return 'Deleted'
+    else
+      return 'Draft'
+    end
+  end
+
+  def published_comments
+    return self.comments.find(:condition =>array(:published => true))
+  end
+
 end

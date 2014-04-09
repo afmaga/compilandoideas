@@ -1,45 +1,35 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Email:</b>
+  <b><%= _("Email")%>:</b>
   <%= @user.email %>
 </p>
 
 <p>
-  <b>Hashed password:</b>
-  <%= @user.hashed_password %>
-</p>
-
-<p>
-  <b>Salt:</b>
-  <%= @user.salt %>
-</p>
-
-<p>
-  <b>Name:</b>
+  <b><%= _("User name")%>:</b>
   <%= @user.name %>
 </p>
 
 <p>
-  <b>F name:</b>
+  <b><%= _("First name")%>:</b>
   <%= @user.f_name %>
 </p>
 
 <p>
-  <b>L name:</b>
+  <b><%= _("Last name")%>:</b>
   <%= @user.l_name %>
 </p>
-
+<% if session[:role] == 'admin' %>
 <p>
-  <b>Active:</b>
+  <b><%= _("Active")%>:</b>
   <%= @user.active %>
 </p>
 
 <p>
-  <b>Role:</b>
+  <b><%= _("Role")%>:</b>
   <%= @user.role %>
 </p>
-
+<% end %>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
